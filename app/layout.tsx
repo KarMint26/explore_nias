@@ -2,11 +2,15 @@ import type { Metadata, Viewport } from "next";
 import { Inter } from "next/font/google";
 import NextTopLoader from "nextjs-toploader";
 import "./globals.css";
+import Wrapper from "@/components/custom/Wrapper";
+import { ThemeProvider } from "@/components/custom/theme-provider";
+import LocaleProvider from "@/contexts/LocaleContext";
 
 const APP_NAME = "Explore Nias";
 const APP_DEFAULT_TITLE = "Explore Nias";
 const APP_TITLE_TEMPLATE = "Explore Nias - %s";
-const APP_DESCRIPTION = "Mengenal Lebih Dekat Nias dan Kekayaan Budayanya Serta Keindahan Alamnya.";
+const APP_DESCRIPTION =
+  "Mengenal Lebih Dekat Nias dan Kekayaan Budayanya Serta Keindahan Alamnya.";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -58,14 +62,24 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <NextTopLoader 
-          color="#4B483C"
-          shadow="0 0 15px #9C9680,0 0 10px #9C9680, 0 0 5px #9C9680"
-          speed={250}
-          crawlSpeed={250}
-          showSpinner={false}
-        />
-        {children}
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
+          disableTransitionOnChange
+        >
+          <LocaleProvider>
+            <NextTopLoader
+              color="#4B483C"
+              shadow="0 0 15px #9C9680,0 0 10px #9C9680, 0 0 5px #9C9680"
+              speed={250}
+              crawlSpeed={250}
+              showSpinner={false}
+            />
+            <Wrapper />
+            <div className="w-full h-fit px-7 pt-36">{children}</div>
+          </LocaleProvider>
+        </ThemeProvider>
       </body>
     </html>
   );

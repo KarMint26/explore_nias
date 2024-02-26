@@ -1,13 +1,13 @@
 "use client";
 
 import Image from "next/image";
-import React from "react";
+import React, { useState } from "react";
 import ListItem from "./ListItem";
 import { FaMapLocationDot } from "react-icons/fa6";
 import { FaHome, FaTheaterMasks } from "react-icons/fa";
 import { MdArticle } from "react-icons/md";
 import { PiBowlFoodFill } from "react-icons/pi";
-import { Menu, Moon, Sun, XCircle } from "lucide-react";
+import { ChevronUp, Menu, Moon, Sun, XCircle } from "lucide-react";
 import { useTheme } from "next-themes";
 import { Button } from "@/components/ui/button";
 import {
@@ -32,6 +32,7 @@ export default function Navbar({
 }: NavbarProps) {
   const { setTheme } = useTheme();
   const { locale, toggleLocale } = useLocale();
+  const [dropdownArrow, setDropdownArrow] = useState<boolean>(false);
 
   return (
     <React.Fragment>
@@ -161,39 +162,56 @@ export default function Navbar({
 
         <div className="side-menu flex justify-center items-center space-x-3 lg:space-x-5">
           {/* Toggle Switch Language */}
-          <DropdownMenu>
+          <DropdownMenu onOpenChange={setDropdownArrow} open={dropdownArrow}>
             <DropdownMenuTrigger asChild>
-              <Button variant="outline" size="default" className="px-3 sm:px-6">
+              <Button
+                variant="outline"
+                onClick={() => setDropdownArrow((prev) => !prev)}
+                size="default"
+                className="px-2 sm:px-3"
+              >
                 {locale === "id" ? (
-                  <div className="flex justify-center items-center gap-2 h-[1.2rem] w-[1.4rem]">
-                    <Image
-                      src={"/assets/indonesia.png"}
-                      width={50}
-                      height={40}
-                      alt="indonesia-flag"
-                    />
-                    <div className="hidden sm:flex">ID</div>
+                  <div className="text-xs sm:text-sm flex justify-center items-center h-[1.2rem] w-[1.4rem]">
+                    <div>ID</div>
                   </div>
                 ) : (
-                  <div className="flex justify-center items-center gap-2 h-[1.2rem] w-[1.4rem]">
-                    <Image
-                      src={"/assets/uk.png"}
-                      width={50}
-                      height={40}
-                      alt="uk-flag"
-                    />
-                    <div className="hidden sm:flex">EN</div>
+                  <div className="text-xs sm:text-sm flex justify-center items-center h-[1.2rem] w-[1.4rem]">
+                    <div>EN</div>
                   </div>
                 )}
+                <ChevronUp
+                  size={20}
+                  className={`${
+                    dropdownArrow ? "rotate-0" : "rotate-180"
+                  } transition duration-200`}
+                />
                 <span className="sr-only">Toggle language</span>
               </Button>
             </DropdownMenuTrigger>
             <DropdownMenuContent align="end" className="z-[1000]">
-              <DropdownMenuItem onClick={toggleLocale}>
-                Indonesia
+              <DropdownMenuItem
+                className="flex items-center space-x-2"
+                onClick={() => toggleLocale("id")}
+              >
+                <Image
+                  src={"/assets/indonesia.png"}
+                  width={30}
+                  height={20}
+                  alt="indonesia-flag"
+                />
+                <div>Indonesia</div>
               </DropdownMenuItem>
-              <DropdownMenuItem onClick={toggleLocale}>
-                English
+              <DropdownMenuItem
+                className="flex items-center space-x-2"
+                onClick={() => toggleLocale("en")}
+              >
+                <Image
+                  src={"/assets/uk.png"}
+                  width={30}
+                  height={20}
+                  alt="uk-flag"
+                />
+                <div>English</div>
               </DropdownMenuItem>
             </DropdownMenuContent>
           </DropdownMenu>

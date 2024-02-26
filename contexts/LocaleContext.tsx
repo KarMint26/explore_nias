@@ -4,15 +4,15 @@ import { createContext, useContext, useEffect, useMemo, useState } from "react";
 
 const LocaleContext = createContext({
   locale: "id",
-  toggleLocale: () => {},
+  toggleLocale: (locale: string) => {},
 });
 
 const LocaleProvider = ({ children }: { children: React.ReactNode }) => {
   const [locale, setLocale] = useState<string>("id");
 
-  const toggleLocale = () => {
-    setLocale((prevState) => {
-      const localeNow: string = prevState === "id" ? "en" : "id";
+  const toggleLocale = (locale: string) => {
+    setLocale(() => {
+      const localeNow: string = locale;
       localStorage.setItem("locale", localeNow);
 
       return localeNow;

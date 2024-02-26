@@ -1,10 +1,10 @@
 import type { Metadata, Viewport } from "next";
 import { Inter } from "next/font/google";
 import NextTopLoader from "nextjs-toploader";
-import "./globals.css";
 import Wrapper from "@/components/custom/Wrapper";
 import { ThemeProvider } from "@/components/custom/theme-provider";
 import LocaleProvider from "@/contexts/LocaleContext";
+import "./globals.css";
 
 const APP_NAME = "Explore Nias";
 const APP_DEFAULT_TITLE = "Explore Nias";

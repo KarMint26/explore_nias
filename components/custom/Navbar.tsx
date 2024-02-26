@@ -7,7 +7,7 @@ import { FaMapLocationDot } from "react-icons/fa6";
 import { FaHome, FaTheaterMasks } from "react-icons/fa";
 import { MdArticle } from "react-icons/md";
 import { PiBowlFoodFill } from "react-icons/pi";
-import { Moon, Sun } from "lucide-react";
+import { Menu, Moon, Sun, XCircle } from "lucide-react";
 import { useTheme } from "next-themes";
 import { Button } from "@/components/ui/button";
 import {
@@ -17,6 +17,7 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 import { useLocale } from "@/contexts/LocaleContext";
+import Link from "next/link";
 
 type NavbarProps = {
   activeLink: string | any;
@@ -34,17 +35,98 @@ export default function Navbar({
 
   return (
     <React.Fragment>
-      {/* Desktop Version */}
+      {/* Mobile and Tablet Version */}
+      <div
+        onClick={() => setActiveNav(false)}
+        className={`bg-background/20 backdrop-blur-sm lg:hidden w-[30%] sm:w-[40%] h-screen fixed right-0 top-0 z-[1000] ${
+          activeNav
+            ? "opacity-100 -translate-x-0"
+            : "opacity-0 -translate-x-[800px]"
+        }`}
+      ></div>
+      <div
+        className={`popup-menu flex lg:hidden flex-col justify-center items-center fixed left-0 top-0 h-screen w-[70%] sm:w-[60%] sm:text-xl bg-background z-[1000] space-y-8 transition-all duration-300 ${
+          activeNav
+            ? "opacity-100 -translate-x-0"
+            : "opacity-0 -translate-x-[600px]"
+        }`}
+      >
+        <Button
+          variant="outline"
+          size="icon"
+          className={`flex lg:hidden fixed top-6 right-[30px] ${
+            activeNav
+              ? "opacity-100 -translate-x-0"
+              : "opacity-0 -translate-x-[600px]"
+          }`}
+          onClick={() => setActiveNav(false)}
+        >
+          <XCircle color="#9C9680" />
+        </Button>
+        <Link
+          href="/"
+          onClick={() => setActiveNav(false)}
+          className="list-menu text-main flex justify-center items-center space-x-2 sm:space-x-4 uppercase font-semibold"
+        >
+          <FaHome className="text-lg" />
+          <div>{locale === "id" ? "Beranda" : "Homepage"}</div>
+        </Link>
+        <Link
+          href="/tour"
+          onClick={() => setActiveNav(false)}
+          className="list-menu text-main flex justify-center items-center space-x-2 sm:space-x-4 uppercase font-semibold"
+        >
+          <FaMapLocationDot className="text-lg" />
+          <div>{locale === "id" ? "Wisata" : "Tour"}</div>
+        </Link>
+        <Link
+          href="/culture"
+          onClick={() => setActiveNav(false)}
+          className="list-menu text-main flex justify-center items-center space-x-2 sm:space-x-4 uppercase font-semibold"
+        >
+          <FaTheaterMasks className="text-lg" />
+          <div>{locale === "id" ? "Budaya" : "Culture"}</div>
+        </Link>
+        <Link
+          href="/article"
+          onClick={() => setActiveNav(false)}
+          className="list-menu text-main flex justify-center items-center space-x-2 sm:space-x-4 uppercase font-semibold"
+        >
+          <MdArticle className="text-lg" />
+          <div>{locale === "id" ? "Artikel" : "Article"}</div>
+        </Link>
+        <Link
+          href="/culinary"
+          onClick={() => setActiveNav(false)}
+          className="list-menu text-main flex justify-center items-center space-x-2 sm:space-x-4 uppercase font-semibold"
+        >
+          <PiBowlFoodFill className="text-lg" />
+          <div>{locale === "id" ? "Kuliner" : "Culinary"}</div>
+        </Link>
+      </div>
+
       <div className="fixed top-0 w-full h-fit px-4 py-3 bg-background z-[999] flex justify-between items-center">
-        <div className="nav-brand">
-          <Image
-            src={"/assets/logo.png"}
-            width={200}
-            height={200}
-            alt="explore nias icon"
-          />
+        <div className="nav-brand flex justify-center items-center">
+          <Button
+            variant="outline"
+            size="icon"
+            className="relative flex translate-x-2 lg:hidden lg:translate-x-0 z-10"
+            onClick={() => setActiveNav((prev) => !prev)}
+          >
+            <Menu />
+          </Button>
+          <Link href="/">
+            <Image
+              src={"/assets/logo.png"}
+              width={200}
+              height={200}
+              alt="explore nias icon"
+              className="scale-[0.65] sm:scale-75 lg:scale-100 -translate-x-4 sm:translate-x-0"
+            />
+          </Link>
         </div>
-        <div className="nav-list-menu flex justify-center items-center space-x-4">
+        {/* Desktop Version */}
+        <div className="nav-list-menu lg:flex justify-center items-center space-x-4 hidden">
           <ListItem
             activeLink={activeLink}
             text={locale === "id" ? "Beranda" : "Homepage"}
@@ -54,33 +136,34 @@ export default function Navbar({
           <ListItem
             activeLink={activeLink}
             text={locale === "id" ? "Wisata" : "Tour"}
-            href="/wisata"
+            href="/tour"
             icon={<FaMapLocationDot className="text-xl" />}
           />
           <ListItem
             activeLink={activeLink}
             text={locale === "id" ? "Budaya" : "Culture"}
-            href="/budaya"
+            href="/culture"
             icon={<FaTheaterMasks className="text-xl" />}
           />
           <ListItem
             activeLink={activeLink}
             text={locale === "id" ? "Artikel" : "Article"}
-            href="/artikel"
+            href="/article"
             icon={<MdArticle className="text-xl" />}
           />
           <ListItem
             activeLink={activeLink}
             text={locale === "id" ? "Kuliner" : "Culinary"}
-            href="/kuliner"
+            href="/culinary"
             icon={<PiBowlFoodFill className="text-xl" />}
           />
         </div>
-        <div className="side-menu flex justify-center items-center space-x-5">
+
+        <div className="side-menu flex justify-center items-center space-x-3 lg:space-x-5">
           {/* Toggle Switch Language */}
           <DropdownMenu>
             <DropdownMenuTrigger asChild>
-              <Button variant="outline" size="default" className="px-6">
+              <Button variant="outline" size="default" className="px-3 sm:px-6">
                 {locale === "id" ? (
                   <div className="flex justify-center items-center gap-2 h-[1.2rem] w-[1.4rem]">
                     <Image
@@ -89,7 +172,7 @@ export default function Navbar({
                       height={40}
                       alt="indonesia-flag"
                     />
-                    ID
+                    <div className="hidden sm:flex">ID</div>
                   </div>
                 ) : (
                   <div className="flex justify-center items-center gap-2 h-[1.2rem] w-[1.4rem]">
@@ -99,7 +182,7 @@ export default function Navbar({
                       height={40}
                       alt="uk-flag"
                     />
-                    EN
+                    <div className="hidden sm:flex">EN</div>
                   </div>
                 )}
                 <span className="sr-only">Toggle language</span>

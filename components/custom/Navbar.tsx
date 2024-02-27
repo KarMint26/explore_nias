@@ -42,14 +42,14 @@ export default function Navbar({
         className={`bg-background/20 backdrop-blur-sm lg:hidden w-[30%] sm:w-[40%] h-screen fixed right-0 top-0 z-[1000] ${
           activeNav
             ? "opacity-100 -translate-x-0"
-            : "opacity-0 -translate-x-[800px]"
+            : "opacity-0 -translate-x-[1200px]"
         }`}
       ></div>
       <div
-        className={`popup-menu flex lg:hidden flex-col justify-center items-center fixed left-0 top-0 h-screen w-[70%] sm:w-[60%] sm:text-xl bg-background z-[1000] space-y-8 transition-all duration-300 ${
+        className={`popup-menu flex lg:hidden flex-col pt-16 fixed left-0 top-0 h-screen w-[70%] sm:w-[60%] sm:text-xl bg-background z-[1000] space-y-8 transition-all duration-300 ${
           activeNav
             ? "opacity-100 -translate-x-0"
-            : "opacity-0 -translate-x-[600px]"
+            : "opacity-0 -translate-x-[1200px]"
         }`}
       >
         <Button
@@ -67,7 +67,7 @@ export default function Navbar({
         <Link
           href="/"
           onClick={() => setActiveNav(false)}
-          className="list-menu text-main flex justify-center items-center space-x-2 sm:space-x-4 uppercase font-semibold"
+          className="list-menu text-main flex py-2 pl-[25%] sm:pl-[35%] items-center space-x-2 sm:space-x-4 uppercase font-semibold"
         >
           <FaHome className="text-lg" />
           <div>{locale === "id" ? "Beranda" : "Homepage"}</div>
@@ -75,7 +75,7 @@ export default function Navbar({
         <Link
           href="/tour"
           onClick={() => setActiveNav(false)}
-          className="list-menu text-main flex justify-center items-center space-x-2 sm:space-x-4 uppercase font-semibold"
+          className="list-menu text-main flex py-2 pl-[25%] sm:pl-[35%] items-center space-x-2 sm:space-x-4 uppercase font-semibold"
         >
           <FaMapLocationDot className="text-lg" />
           <div>{locale === "id" ? "Wisata" : "Tour"}</div>
@@ -83,7 +83,7 @@ export default function Navbar({
         <Link
           href="/culture"
           onClick={() => setActiveNav(false)}
-          className="list-menu text-main flex justify-center items-center space-x-2 sm:space-x-4 uppercase font-semibold"
+          className="list-menu text-main flex py-2 pl-[25%] sm:pl-[35%] items-center space-x-2 sm:space-x-4 uppercase font-semibold"
         >
           <FaTheaterMasks className="text-lg" />
           <div>{locale === "id" ? "Budaya" : "Culture"}</div>
@@ -91,7 +91,7 @@ export default function Navbar({
         <Link
           href="/article"
           onClick={() => setActiveNav(false)}
-          className="list-menu text-main flex justify-center items-center space-x-2 sm:space-x-4 uppercase font-semibold"
+          className="list-menu text-main flex py-2 pl-[25%] sm:pl-[35%] items-center space-x-2 sm:space-x-4 uppercase font-semibold"
         >
           <MdArticle className="text-lg" />
           <div>{locale === "id" ? "Artikel" : "Article"}</div>
@@ -99,7 +99,7 @@ export default function Navbar({
         <Link
           href="/culinary"
           onClick={() => setActiveNav(false)}
-          className="list-menu text-main flex justify-center items-center space-x-2 sm:space-x-4 uppercase font-semibold"
+          className="list-menu text-main flex py-2 pl-[25%] sm:pl-[35%] items-center space-x-2 sm:space-x-4 uppercase font-semibold"
         >
           <PiBowlFoodFill className="text-lg" />
           <div>{locale === "id" ? "Kuliner" : "Culinary"}</div>

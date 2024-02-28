@@ -77,7 +77,7 @@ export default function RootLayout({
               showSpinner={false}
             />
             <Wrapper />
-            <div className="w-full h-fit px-7 pt-36">{children}</div>
+            <div className="w-full h-fit">{children}</div>
           </LocaleProvider>
         </ThemeProvider>
       </body>

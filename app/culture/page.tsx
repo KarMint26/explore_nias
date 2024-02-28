@@ -1,5 +1,6 @@
 import { Metadata } from "next";
 import React from "react";
+import Culture from "./Culture";
 
 export const metadata: Metadata = {
   title: "Culture",
@@ -7,8 +8,8 @@ export const metadata: Metadata = {
     "Mengenal Lebih Dekat Nias dan Kekayaan Budayanya Serta Keindahan Alamnya.",
 };
 
-const Culture = () => {
-  return <div>Culture</div>;
+const CulturePage = () => {
+  return <Culture />;
 };
 
-export default Culture;
+export default CulturePage;

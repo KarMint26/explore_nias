@@ -6,7 +6,6 @@ import ListItem from "./ListItem";
 import { FaMapLocationDot } from "react-icons/fa6";
 import { FaHome, FaTheaterMasks } from "react-icons/fa";
 import { MdArticle } from "react-icons/md";
-import { PiBowlFoodFill } from "react-icons/pi";
 import { ChevronUp, Menu, Moon, Sun, XCircle } from "lucide-react";
 import { useTheme } from "next-themes";
 import { Button } from "@/components/ui/button";
@@ -18,6 +17,7 @@ import {
 } from "@/components/ui/dropdown-menu";
 import { useLocale } from "@/contexts/LocaleContext";
 import Link from "next/link";
+import { BiSolidPhotoAlbum } from "react-icons/bi";
 
 type NavbarProps = {
   activeLink: string | any;
@@ -39,7 +39,7 @@ export default function Navbar({
       {/* Mobile and Tablet Version */}
       <div
         onClick={() => setActiveNav(false)}
-        className={`bg-background/20 backdrop-blur-sm lg:hidden w-[30%] sm:w-[40%] h-screen fixed right-0 top-0 z-[1000] ${
+        className={`bg-background/20 backdrop-blur-sm lg:hidden w-[30%] sm:w-[40%] h-screen fixed right-0 top-0 z-[1000] transition-all duration-300 ${
           activeNav
             ? "opacity-100 -translate-x-0"
             : "opacity-0 -translate-x-[1200px]"
@@ -101,8 +101,8 @@ export default function Navbar({
           onClick={() => setActiveNav(false)}
           className="list-menu text-main flex py-2 pl-[25%] sm:pl-[35%] items-center space-x-2 sm:space-x-4 uppercase font-semibold"
         >
-          <PiBowlFoodFill className="text-lg" />
-          <div>{locale === "id" ? "Kuliner" : "Culinary"}</div>
+          <BiSolidPhotoAlbum className="text-lg" />
+          <div>{locale === "id" ? "Galeri" : "Gallery"}</div>
         </Link>
       </div>
 
@@ -154,9 +154,9 @@ export default function Navbar({
           />
           <ListItem
             activeLink={activeLink}
-            text={locale === "id" ? "Kuliner" : "Culinary"}
+            text={locale === "id" ? "Galeri" : "Gallery"}
             href="/culinary"
-            icon={<PiBowlFoodFill className="text-xl" />}
+            icon={<BiSolidPhotoAlbum className="text-xl" />}
           />
         </div>
 

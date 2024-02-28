@@ -2,13 +2,13 @@ import { Metadata } from "next";
 import React from "react";
 
 export const metadata: Metadata = {
-  title: "Culinary",
+  title: "Gallery",
   description:
     "Mengenal Lebih Dekat Nias dan Kekayaan Budayanya Serta Keindahan Alamnya.",
 };
 
-const Culinary = () => {
-  return <div>Culinary</div>;
+const Gallery = () => {
+  return <div>Gallery</div>;
 };
 
-export default Culinary;
+export default Gallery;

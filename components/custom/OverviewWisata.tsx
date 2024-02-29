@@ -1,3 +1,6 @@
+"use client";
+
+import { useLocale } from "@/contexts/LocaleContext";
 import Image from "next/image";
 import React from "react";
 
@@ -30,12 +33,15 @@ function CardWisata({ name, image }: { name: string; image: string }) {
   );
 }
 function OverviewWisata() {
+  const { locale } = useLocale();
+
   return (
     <div className="w-full bg-white p-10">
       <div className="flex w-full justify-between items-center">
         <p className="text-xl text-main w-[28rem] text-center">
-          "Jelajahi keajaiban Pulau Nias, tempat di mana keindahan alam tropis
-          bertemu dengan kekayaan budaya yang khas."
+          {locale === "id"
+            ? "Jelajahi keajaiban Pulau Nias, tempat di mana keindahan alam tropis bertemu dengan kekayaan budaya yang khas."
+            : "Explore the wonders of Nias Island, a place where tropical natural beauty meets a rich and distinctive culture."}
         </p>
         <div className="text-right">
           <div className="flex flex-row-reverse mb-3">

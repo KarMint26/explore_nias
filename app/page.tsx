@@ -1,3 +1,4 @@
+import Banner from "@/components/custom/Banner";
 import HeroScreen from "@/components/custom/HeroScreen";
 import OverviewWisata from "@/components/custom/OverviewWisata";
 import RouteMaps from "@/components/custom/RouteMaps";
@@ -39,6 +40,12 @@ export default function Home() {
 
       {/* Wisata */}
       <OverviewWisata />
+
+      {/* Banner */}
+      <Banner />
+
+      {/* Budaya */}
+      {/* <Budaya /> */}
     </main>
   );
 }

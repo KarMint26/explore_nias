@@ -188,10 +188,6 @@ function RouteMaps() {
   );
   const [routeActive, setRouteActive] = React.useState<string>("Jakarta");
 
-  // useEffect(() => {
-
-  // }, [locale]);
-
   return (
     <div className="w-full relative">
       <div className="w-full bg-white flex flex-col">

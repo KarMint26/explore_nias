@@ -5,6 +5,7 @@ import Wrapper from "@/components/custom/Wrapper";
 import { ThemeProvider } from "@/components/custom/theme-provider";
 import LocaleProvider from "@/contexts/LocaleContext";
 import "./globals.css";
+import Footer from "@/components/custom/Footer";
 
 const APP_NAME = "Explore Nias";
 const APP_DEFAULT_TITLE = "Explore Nias";
@@ -78,6 +79,7 @@ export default function RootLayout({
             />
             <Wrapper />
             <div className="w-full h-fit">{children}</div>
+            <Footer />
           </LocaleProvider>
         </ThemeProvider>
       </body>

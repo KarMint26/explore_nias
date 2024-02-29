@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 html {
-  @apply scroll-smooth;
+  scroll-behavior: smooth !important;  
 }
 
 @layer base {
@@ -119,3 +119,46 @@ html {
     transform: rotate(360deg);
   }
 }
+
+/* Culture */
+.card-item-1 {
+  background: url("/assets/Culture/list-culture/image-1.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.card-item-2 {
+  background: url("/assets/Culture/list-culture/image-2.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.card-item-3 {
+  background: url("/assets/Culture/list-culture/image-3.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.card-item-4 {
+  background: url("/assets/Culture/list-culture/image-4.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.card-item-5 {
+  background: url("/assets/Culture/list-culture/image-5.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.card-item-6 {
+  background: url("/assets/Culture/list-culture/image-6.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.card-item-7 {
+  background: url("/assets/Culture/list-culture/image-7.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.card-item-8 {
+  background: url("/assets/Culture/list-culture/image-8.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+

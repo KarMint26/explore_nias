@@ -7,7 +7,7 @@ import { TypewriterEffectSmooth } from "@/components/ui/typewriter-effect";
 import { useLocale } from "@/contexts/LocaleContext";
 import getCulture from "@/utils/culture";
 import type { culture } from "@/utils/types";
-import { Drama, MapPin, Search } from "lucide-react";
+import { Drama, Search } from "lucide-react";
 import Image from "next/image";
 import React, { useState } from "react";
 import DetailCulture from "./DetailCulture";

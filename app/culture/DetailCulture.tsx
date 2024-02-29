@@ -41,7 +41,7 @@ export default function DetailCulture({
         width={400}
         height={150}
         alt="hero-image"
-        className="w-[350px] sm:w-[400px] h-[250px] sm:h-[280px] lg:h-[400px] rounded-[30px]"
+        className="w-[350px] sm:w-[400px] h-[250px] sm:h-[280px] lg:h-[400px] rounded-[30px] object-cover"
       />
     </div>
   );

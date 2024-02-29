@@ -107,7 +107,7 @@ const Culture = () => {
               >
                 <CardBody className="w-full h-fit flex flex-col absolute bottom-5 left-5 gap-3">
                   <CardItem translateZ={30}>
-                    <div className="p-2 hover:px-3 w-fit group cursor-crosshair rounded-full bg-white flex justify-center items-center space-x-1 sm:space-x-2 transition duration-300 ">
+                    <div className="p-2 hover:px-3 w-fit group cursor-progress rounded-full bg-white flex justify-center items-center space-x-1 sm:space-x-2 transition duration-300 ">
                       <Drama color="#504E4B" size={20} />
                       <div className="text-submainDark text-sm hidden group-hover:inline-block  transition duration-300">
                         {data.title}

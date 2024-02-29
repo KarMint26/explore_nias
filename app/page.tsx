@@ -1,4 +1,5 @@
 import HeroScreen from "@/components/custom/HeroScreen";
+import OverviewWisata from "@/components/custom/OverviewWisata";
 import RouteMaps from "@/components/custom/RouteMaps";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
@@ -35,6 +36,9 @@ export default function Home() {
 
       {/* Mulai Perjalan */}
       <RouteMaps />
+
+      {/* Wisata */}
+      <OverviewWisata />
     </main>
   );
 }

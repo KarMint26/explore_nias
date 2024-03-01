@@ -29,9 +29,9 @@ function Item({ name, startPrice, endPrice }: ItemType) {
         <h3 className="flex items-center mb-1 text-lg font-semibold text-main dark:text-white">
           {name}
         </h3>
-        <time className="block mb-2 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">
+        <p className="block mb-2 text-sm font-normal leading-none text-gray-400 dark:text-gray-300">
           IDR {startPrice} - {endPrice}
-        </time>
+        </p>
       </li>
     </>
   );
@@ -41,7 +41,7 @@ const dataMaps = [
   {
     nameId: "Dunia",
     nameEn: "World",
-    image: "/assets/maps/dunia.png",
+    image: "/assets/homepage/maps/dunia.png",
     timeLine: [
       {
         id: 1,
@@ -76,7 +76,7 @@ const dataMaps = [
   {
     nameId: "Singapura",
     nameEn: "Singapore",
-    image: "/assets/maps/singapura.png",
+    image: "/assets/homepage/maps/singapura.png",
     timeLine: [
       {
         id: 1,
@@ -111,7 +111,7 @@ const dataMaps = [
   {
     nameId: "Jakarta",
     nameEn: "Jakarta",
-    image: "/assets/maps/jakarta.png",
+    image: "/assets/homepage/maps/jakarta.png",
     timeLine: [
       {
         id: 1,
@@ -146,7 +146,7 @@ const dataMaps = [
   {
     nameId: "Banten",
     nameEn: "Banten",
-    image: "/assets/maps/banten.png",
+    image: "/assets/homepage/maps/banten.png",
     timeLine: [
       {
         id: 1,
@@ -190,19 +190,21 @@ function RouteMaps() {
 
   return (
     <div className="w-full relative">
-      <div className="w-full bg-white flex flex-col">
+      <div className="w-full bg-white  dark:bg-darkBg flex flex-col">
         <Button
           className="text-lg hover:bg-transparent bg-transparent shadow-none text-main self-center rounded-full px-10 py-5 mt-5"
           onClick={() => setShowDetailRoute(true)}
         >
-          <IoIosArrowUp className="text-4xl font-bold text-black" />
+          <IoIosArrowUp className="text-4xl font-bold text-black dark:text-white" />
         </Button>
 
-        <h3 className="text-main text-3xl mb-5 text-center">
-          Mulai Perjalananmu dari
+        <h3 className="text-main text-3xl mb-8 text-center">
+          {locale === "id"
+            ? "Pilih Perjalananmu dari"
+            : "Choose Your Trip from"}
         </h3>
 
-        <div className="w-full py-14 px-16 mb-10 bg-mainLight items-center rounded-t-[5rem] flex justify-between">
+        <div className="w-full py-20 px-16 mb-10 bg-mainLight  items-center rounded-t-[5rem] flex justify-between">
           {dataMaps.map((item, index) => (
             <div
               className="w-80 relative cursor-pointer"
@@ -214,13 +216,13 @@ function RouteMaps() {
             >
               <Image
                 src={item.image}
-                width={500}
-                height={500}
-                className="w-full scale-90"
+                width={600}
+                height={600}
+                className="w-full"
                 alt={item.nameEn}
               />
 
-              <h3 className="text-white text-3xl absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 drop-shadow-xl">
+              <h3 className="text-white text-3xl absolute font-medium top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 drop-shadow-2xl">
                 {locale === "id" ? item.nameId : item.nameEn}
               </h3>
             </div>
@@ -229,23 +231,25 @@ function RouteMaps() {
       </div>
 
       {showDetailRoute && (
-        <div className="absolute bg-white top-0 right-0 flex flex-col items-center w-screen h-screen">
+        <div className="absolute bg-white dark:bg-darkBg top-0 right-0 flex flex-col items-center w-screen h-screen">
           <Button
-            className="text-lg hover:bg-transparent bg-transparent shadow-none text-main self-center rounded-full px-10 py-5 mt-5"
+            className="text-lg hover:bg-transparent bg-transparent shadow-none text-main dark:text-white self-center rounded-full px-10 py-5 mt-5"
             onClick={() => setShowDetailRoute(false)}
           >
-            <IoIosArrowDown className="text-4xl font-bold text-black" />
+            <IoIosArrowDown className="text-4xl font-bold text-black dark:text-white" />
           </Button>
 
           <h3 className="text-main text-3xl mb-5 text-center">
-            Menjelajahi Pengalaman Berharga di Explorenias
+            {locale === "id"
+              ? "Menjelajahi Pengalaman Berharga di Explorenias"
+              : "Exploring the Precious Experience at Explorenias"}
           </h3>
 
           <div className=" flex items-center">
             <div className="roadmap w-[40rem]">
               <h3 className="text-3xl text-main">{routeActive}</h3>
 
-              <ol className="relative border-s border-black dark:border-gray-700 mt-5">
+              <ol className="relative border-s border-black dark:border-gray-600 mt-5">
                 {dataRoute.map((item) => (
                   <Item
                     key={item.id}
@@ -260,12 +264,12 @@ function RouteMaps() {
               <Image
                 src={
                   routeActive === "Jakarta"
-                    ? "/assets/maps/jakarta.png"
+                    ? "/assets/homepage/maps/jakarta.png"
                     : routeActive === "Banten"
-                    ? "/assets/maps/banten.png"
+                    ? "/assets/homepage/maps/banten.png"
                     : routeActive === "Singapura"
-                    ? "/assets/maps/singapura.png"
-                    : "/assets/maps/dunia.png"
+                    ? "/assets/homepage/maps/singapura.png"
+                    : "/assets/homepage/maps/dunia.png"
                 }
                 alt="maps"
                 width={500}

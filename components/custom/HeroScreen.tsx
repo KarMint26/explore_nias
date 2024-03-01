@@ -2,37 +2,24 @@
 
 import React, { useEffect } from "react";
 import { Button } from "@/components/ui/button";
-// import {
-//   Carousel,
-//   CarouselContent,
-//   CarouselItem,
-//   CarouselNext,
-//   CarouselPrevious,
-// } from "@/components/ui/carousel";
 import { useTheme } from "next-themes";
-import Image from "next/image";
-
-const dataImage = [
-  "/assets/foto/0.jpg",
-  "/assets/foto/1.png",
-  "/assets/foto/2.png",
-  "/assets/foto/3.png",
-  "/assets/foto/4.png",
-];
-
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 import { Carousel } from "react-responsive-carousel";
+import { dataImagesCarousel } from "@/utils/homepage";
+import Image from "next/image";
+import { useLocale } from "@/contexts/LocaleContext";
 
 function HeroScreen() {
   const { theme } = useTheme();
+  const { locale } = useLocale();
 
   return (
     <div className="w-full h-screen relative">
       <video
         src={
           theme === "light"
-            ? "/assets/video/homepage.mp4"
-            : "/assets/video/homepage-dark.mp4"
+            ? "/assets/homepage/video/homepage.mp4"
+            : "/assets/homepage/video/homepage-dark.mp4"
         }
         className="w-full h-screen object-cover"
         autoPlay
@@ -41,16 +28,20 @@ function HeroScreen() {
       />
       <div className="absolute top-0 left-0 w-full h-full flex items-center justify-between p-5">
         <div className="w-1/2 flex flex-col items-center">
-          <div className="bg-white/70 w-[32rem] p-10 backdrop-blur-sm rounded-xl">
-            <h1 className="text-2xl">Gaya baru berwisata di Nias</h1>
+          <div className="bg-white/70 dark:bg-black/30 w-[32rem] p-10 backdrop-blur-md rounded-xl">
+            <h1 className="text-2xl font-semibold">
+              {locale === "id"
+                ? "Gaya baru berwisata di Nias"
+                : "A new style of traveling on Nias"}
+            </h1>
             <p className="text-lg mt-3">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex
-              pariatur consequatur laborum repellat eligendi fuga eius quam esse
-              distinctio, tenetur omnis labore, itaque ratione odit?
+              {locale === "id"
+                ? "Lebih dari keindahan alam, Nias juga menawarkan kekayaan budaya  yang unik. Suku Nias terkenal dengan tradisi lompat batu yang luar biasa, sebuah pertunjukan keberanian dan kekuatan yang mempesona"
+                : "More than natural beauty, Nias also offers a rich culture that is unique. The Nias tribe is famous for its extraordinary stone jumping tradition, a dazzling display of courage and strength. tradition, a dazzling display of courage and strength."}
             </p>
           </div>
-          <Button className="bg-main text-lg text-white rounded-full px-10 py-6 mt-5 shadow-lg">
-            Mulai
+          <Button className="bg-main text-lg dark:hover:bg-gray-700 text-white rounded-full px-10 py-6 mt-5 shadow-lg">
+            {locale === "id" ? "Mulai Sekarang" : "Get Started Now"}
           </Button>
         </div>
         <div className="w-1/2">
@@ -64,11 +55,13 @@ function HeroScreen() {
             interval={2000}
             className="w-[50rem] h-[40rem] p-5 rounded-3xl relative"
           >
-            {dataImage.map((item, index) => (
-              <img
+            {dataImagesCarousel.map((item, index) => (
+              <Image
                 src={item}
                 key={index}
-                className="rounded-3xl object-cover h-full"
+                width={500}
+                height={650}
+                className="rounded-3xl h-[43rem] object-cover"
                 alt="slide-1"
               />
             ))}

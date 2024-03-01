@@ -28,7 +28,7 @@ export default function Footer() {
           />
         </Link>
         <div className="content-footer flex flex-col w-full gap-2 sm:gap-3 lg:gap-4 text-white">
-          <div className="top-menu border-b py-2 pb-3 sm:pb-4 flex justify-between items-center mb-2">
+          <div className="top-menu border-b border-white py-2 pb-3 sm:pb-4 flex justify-between items-center mb-2">
             <div className="nav-menu flex justify-center items-center gap-3 sm:gap-4 lg:gap-6 text-xs sm:text-base lg:text-lg">
               <Link className="flex items-center gap-2 sm:gap-3" href="/tour">
                 <FaMapLocationDot />

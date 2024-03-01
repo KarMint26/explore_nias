@@ -25,10 +25,7 @@ const Article = () => {
                 alt="shape-icon"
                 className="scale-[0.80] sm:scale-100"
               />
-              <div className="flex flex-col text-main font-bold">
-                <div className="location text-sm sm:text-base lg:text-lg">
-                  {listArticle[0].location}
-                </div>
+              <div className="flex flex-col text-main font-bold justify-center">
                 <div className="datetime text-[0.75rem] sm:text-sm lg:text-base">
                   {listArticle[0].datetime}
                 </div>
@@ -66,7 +63,6 @@ const Article = () => {
             text={data.text}
             datetime={data.datetime}
             imageNumber={String(data.id)}
-            location={data.location}
             id={data.id}
             isDiff={data.isDiff}
             isReverse={data.isReverse}

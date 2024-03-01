@@ -5,7 +5,6 @@ import React from "react";
 
 export default function ArticleItem({
   id,
-  location,
   datetime,
   title,
   text,
@@ -15,7 +14,6 @@ export default function ArticleItem({
   locale,
 }: {
   id: number;
-  location: string;
   datetime: string;
   title: string;
   text: string;
@@ -41,10 +39,7 @@ export default function ArticleItem({
             alt="shape-icon"
             className="scale-[0.80] sm:scale-100"
           />
-          <div className="flex flex-col text-main font-bold">
-            <div className="location text-sm sm:text-base lg:text-lg">
-              {location}
-            </div>
+          <div className="flex flex-col justify-center text-main font-bold">
             <div className="datetime text-[0.75rem] sm:text-sm lg:text-base">
               {datetime}
             </div>

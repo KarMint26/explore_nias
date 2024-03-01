@@ -24,6 +24,7 @@ const config = {
         darkBg: "#131210",
         submain: "#ECE8DF",
         submainDark: "#504e4b",
+        mainDark: "#0f0f0f",
         footerColor: "#334060",
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",

@@ -161,4 +161,14 @@ html {
   background-size: cover;
   background-repeat: no-repeat;
 }
+.card-item-9 {
+  background: url("/assets/Culture/list-culture/image-9.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.card-item-10 {
+  background: url("/assets/Culture/list-culture/image-10.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
 

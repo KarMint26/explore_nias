@@ -1,5 +1,6 @@
 import { Metadata } from "next";
 import React from "react";
+import Article from "./Article";
 
 export const metadata: Metadata = {
   title: "Article",
@@ -7,8 +8,8 @@ export const metadata: Metadata = {
     "Mengenal Lebih Dekat Nias dan Kekayaan Budayanya Serta Keindahan Alamnya.",
 };
 
-const Article = () => {
-  return <div>Article</div>;
+const ArticlePage = () => {
+  return <Article />;
 };
 
-export default Article;
+export default ArticlePage;

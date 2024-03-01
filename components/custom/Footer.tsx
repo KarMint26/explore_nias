@@ -18,7 +18,7 @@ export default function Footer() {
   return (
     <div className="w-full h-fit bg-[#334060] dark:bg-black pt-4 pb-0 lg:py-6 flex justify-center lg:justify-normal items-center flex-col">
       <div className="flex justify-between items-center w-full px-3 sm:px-5 lg:px-7">
-        <Link href="/">
+        <Link href="/" className="w-fit h-fit">
           <Image
             src="/assets/short-logo.png"
             width={150}

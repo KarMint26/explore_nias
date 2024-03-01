@@ -38,7 +38,7 @@ const Culture = () => {
   return (
     <React.Fragment>
       {/* Hero Section */}
-      <div className="w-full h-fit bg-submain dark:bg-[#0f0f0f] flex flex-col-reverse lg:flex-row justify-center lg:justify-between items-center pt-36 pb-12 sm:pb-16 px-12 lg:px-20">
+      <div className="w-full h-fit bg-submain dark:bg-mainDark flex flex-col-reverse lg:flex-row justify-center lg:justify-between items-center pt-36 pb-12 sm:pb-16 px-12 lg:px-20">
         <div className="flex flex-col justify-start space-y-4 lg:w-[55%] mt-5 lg:mt-0">
           <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-semibold leading-[2rem] sm:leading-[3.5rem]">
             {locale === "id"
@@ -56,7 +56,7 @@ const Culture = () => {
                   : "There is something interesting about exploring Nias.  New Place, New Beauty.",
             }}
           />
-          <Link href="#culture-section">
+          <Link href="#culture-section" className="w-fit h-fit">
             <Button
               size="lg"
               className="bg-main rounded-full text-sm sm:text-base w-fit hover:bg-submainDark dark:hover:bg-[#c0b99d]"

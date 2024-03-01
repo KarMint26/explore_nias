@@ -43,7 +43,8 @@ const getCulture = () => {
     {
       id: 4,
       title: locale === "id" ? "Pakaian Adat" : "Traditional Clothes",
-      longTitle: locale === "id" ? "Pakaian Adat Nias" : "Nias Traditional Clothes",
+      longTitle:
+        locale === "id" ? "Pakaian Adat Nias" : "Nias Traditional Clothes",
       text:
         locale === "id"
           ? "Pakaian tradisional Nias dinamakan 'Baru Oholu' untuk pakaian pria dan 'Baru Ladari' atau 'Baru Isitö' untuk pakaian wanita. Pakaian tradisional biasanya merah atau kuning dan dikombinasikan dengan warna hitam dan emas. Pada zaman dulu orang-orang di Nias tidak memiliki akses ke tekstil seperti kapas. Mereka membuat pakaian dari kulit pohon atau dengan menenun serat-serat dari kulit pohon atau rumput. Pakaian laki-laki terdiri dari rompi yang pada dasarnya cokelat atau hitam dan dihiasi ornamen kuning, merah dan hitam. Pakaian wanita hanya terdiri dari selembar kain yang melilit pinggang dan tanpa baju atas, tapi dihiasi dengan gulungan gelang kuningan dan anting besar."
@@ -94,6 +95,26 @@ const getCulture = () => {
         locale === "id"
           ? "Pada pesta-pesta dan upacara, tempat untuk acara ini sering dihiasi dengan anyaman daun-daun janur.  Dengan menyambungkan anyaman daun janur ini, Orang Nias membuat bentuk dan pola yang indah . Ini disebut Ni'okindrö (anyaman daun janur). Gaya Ni'okindrö bervariasi antara daerah ke daerah. Bentuk yang dibuat oleh daun janur memiliki banyak arti yang berbeda. Hari ini ketika kunjungan tamu penting ke Nias, mereka sering disajikan dengan kalung yang dibuat menggunakan teknik ini. Kalung ini dikenal sebagai Nifatali Bulumio."
           : "At parties and ceremonies, the venue for this event is often decorated with woven coconut leaves. By connecting woven coconut leaves together, Nias people create beautiful shapes and patterns. This is called Ni'okindrö (woven coconut leaves). Ni'okindrö's style varies from region to region. The shapes made by coconut leaves have many different meanings. Today when important guests visit Nias, they are often presented with necklaces made using this technique. This necklace is known as Nifatali Bulumio.",
+    },
+    {
+      id: 9,
+      title: locale === "id" ? "Tari Moyo" : "Moyo Dance",
+      longTitle:
+        locale === "id" ? "Tari Tradisional Moyo" : "Moyo Traditional Dance",
+      text:
+        locale === "id"
+          ? "Tari Moyo ini merupakan tari tradisional yang sudah ada sejak zaman dahulu dan masih dilestarikan hingga kini. Tarian ini merupakan salah satu tarian kebanggaan bagi masyarakat Nias yang kini banyak ditampilkan diberbagai acara perayaan maupun festival budaya. Dilansir dari laman negerikuindonesia, meski asal-usul Tari Moyo belum diketahui secara pasti, namun tarian ini sudah ada sejak ratusan tahun yang lalu. Dulunya, Tari Moyo ini hanya ditampilkan di kalangan masyarakat bangsawan saja, yang memiliki penari khusus untuk melakukan tarian ini."
+          : "Moyo Dance is a traditional dance that has existed since ancient times and is still preserved today. This dance is one of the proud dances of the Nias people which is now often performed at various celebrations and cultural festivals. Reporting from the Negerikuindonesia page, although the origins of the Moyo Dance are not yet known for certain, this dance has been around for hundreds of years. Previously, the Moyo Dance was only performed among noble people, who had special dancers to perform this dance.",
+    },
+    {
+      id: 10,
+      title: locale === "id" ? "Tari Maena" : "Maena Dance",
+      longTitle:
+        locale === "id" ? "Tari Tradisional Maena" : "Maena Traditional Dance",
+      text:
+        locale === "id"
+          ? "Tari Maena termasuk dalam golongan tarian yang dilakukan bersama-sama oleh beberapa orang dalam satu kelompok. Secara budaya, tarian ini merupakan warisan dari nenek moyang yang dilakukan secara turun-menurun oleh masyarakat Nias. Melansir dari warisanbudaya.kemdikbud.go.id, fungsi utama dari Tari Maena sendiri adalah untuk menyambut tamu. Selain itu, tarian ini juga berfungsi sebagai hiburan pada sebuah acara tertentu."
+          : "Maena Dance is included in the group of dances that are performed together by several people in one group. Culturally, this dance is a legacy from their ancestors which has been carried out from generation to generation by the people of Nias. Reporting from inheritancekultur.kemdikbud.go.id, the main function of the Maena Dance itself is to welcome guests. Apart from that, this dance also functions as entertainment at certain events.",
     },
   ];
 

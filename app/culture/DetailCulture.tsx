@@ -25,7 +25,7 @@ export default function DetailCulture({
         {locale === "id" ? "Kembali" : "Back"}
       </div>
       <div className="flex flex-col justify-start space-y-2 sm:space-y-4 lg:w-[55%] mt-5 lg:mt-0">
-        <p className="text-[0.7rem] sm:text-base lg:text-2xl font-normal text-slate-600 dark:text-slate-400 flex items-center gap-2 sm:gap-3 lg:gap-4">
+        <p className="text-[0.7rem] sm:text-base lg:text-2xl font-normal text-slate-600 dark:text-slate-400 flex items-center gap-1 sm:gap-2 lg:gap-3">
           <MapPin size={24} className="scale-[0.75] sm:scale-100" />
           {locale === "id" ? "Nias, Sumatera Utara" : "Nias, North Sumatra"}
         </p>

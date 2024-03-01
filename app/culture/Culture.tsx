@@ -48,12 +48,12 @@ const Culture = () => {
             <TypewriterEffectSmooth words={words} className="font-bold" />
           </h1>
           <p
-            className="text-[0.7rem] sm:text-base lg:text-2xl"
+            className="text-sm sm:text-base lg:text-2xl w-72 sm:w-[38rem]"
             dangerouslySetInnerHTML={{
               __html:
                 locale === "id"
-                  ? "Ada sesuatu yang menarik saat menjelajahi Nias. <br /> tempat baru, keindahan baru."
-                  : "There is something interesting about exploring Nias. <br /> New Place, New Beauty.",
+                  ? "Ada sesuatu yang menarik saat menjelajahi Nias. tempat baru, keindahan baru."
+                  : "There is something interesting about exploring Nias.  New Place, New Beauty.",
             }}
           />
           <Link href="#culture-section">

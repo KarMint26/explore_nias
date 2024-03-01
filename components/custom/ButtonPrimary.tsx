@@ -1,15 +1,23 @@
 import React from "react";
 import { Button } from "../ui/button";
+import Link from "next/link";
 
-function ButtonPrimary({ children, ...props }: { children: React.ReactNode }) {
+function ButtonPrimary({
+  children,
+  to,
+}: {
+  children: React.ReactNode;
+  to: string;
+}) {
   return (
-    <Button
-      size="lg"
-      {...props}
-      className="bg-main rounded-full text-sm sm:text-base w-fit hover:bg-submainDark dark:hover:bg-[#c0b99d] dark:text-white"
-    >
-      {children}
-    </Button>
+    <Link href={to} className="w-fit h-fit">
+      <Button
+        size="lg"
+        className="bg-main rounded-full text-sm sm:text-base w-fit hover:bg-submainDark dark:hover:bg-[#c0b99d]"
+      >
+        {children}
+      </Button>
+    </Link>
   );
 }
 

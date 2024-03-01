@@ -45,6 +45,13 @@ const dataMaps = [
     image: "/assets/homepage/maps/dunia.png",
     timeLine: [
       {
+        id: 0,
+        nameId: "Daerah Asal",
+        nameEn: "Home Region",
+        startPrice: "~",
+        endPrice: "~",
+      },
+      {
         id: 1,
         nameId: "Bandara Soekarno Hatta",
         nameEn: "Soekarno Hatta Airport",
@@ -159,7 +166,7 @@ const dataMaps = [
       {
         id: 2,
         nameId: "Bandara Binaka Gunungsitoli",
-        nameEn: "BBinaka Gunungsitoli Airport",
+        nameEn: "Binaka Gunungsitoli Airport",
         startPrice: "1.000.000",
         endPrice: "1.500.000",
       },
@@ -199,13 +206,13 @@ function RouteMaps() {
           <FiChevronsUp className="text-4xl font-bold text-black dark:text-white" />
         </Button>
 
-        <h3 className="text-main text-3xl mb-8 text-center">
+        <h3 className="text-main text-2xl sm:text-3xl mb-8 text-center">
           {locale === "id"
             ? "Pilih Perjalananmu dari"
             : "Choose Your Trip from"}
         </h3>
 
-        <div className="w-full py-20 px-16 mb-10 bg-mainLight dark:bg-submainDark items-center rounded-t-[5rem] flex justify-between">
+        <div className="w-full py-20 px-16 mb-10 bg-mainLight dark:bg-submainDark items-center rounded-t-[5rem] flex flex-col sm:flex-row justify-between">
           {dataMaps.map((item, index) => (
             <div
               className="w-80 relative cursor-pointer"
@@ -219,7 +226,7 @@ function RouteMaps() {
                 src={item.image}
                 width={600}
                 height={600}
-                className="w-full"
+                className="w-full scale-90 sm:scale-100 drop-shadow-lg"
                 alt={item.nameEn}
               />
 
@@ -232,7 +239,7 @@ function RouteMaps() {
       </div>
 
       {showDetailRoute && (
-        <div className="absolute bg-white dark:bg-darkBg top-0 right-0 flex flex-col items-center w-screen h-screen">
+        <div className="absolute bg-white dark:bg-darkBg top-0 right-0 flex flex-col items-center w-screen">
           <Button
             className="text-lg hover:bg-transparent bg-transparent shadow-none text-main dark:text-white self-center rounded-full px-10 py-5 mt-5"
             onClick={() => setShowDetailRoute(false)}
@@ -240,15 +247,17 @@ function RouteMaps() {
             <FiChevronsDown className="text-4xl font-bold text-black dark:text-white" />
           </Button>
 
-          <h3 className="text-main text-3xl mb-5 text-center">
+          <h3 className="text-main text-xl sm:text-3xl mb-5 text-center">
             {locale === "id"
               ? "Menjelajahi Pengalaman Berharga di Explorenias"
               : "Exploring the Precious Experience at Explorenias"}
           </h3>
 
-          <div className="flex items-center">
-            <div className="roadmap w-[40rem]">
-              <h3 className="text-3xl text-main">{routeActive}</h3>
+          <div className="flex flex-col-reverse justify-center sm:flex-row items-center">
+            <div className="roadmap sm:w-[40rem]">
+              <h3 className="text-xl font-medium sm:text-3xl text-main">
+                {routeActive}
+              </h3>
 
               <ol className="relative border-s border-black dark:border-gray-600 mt-5">
                 {dataRoute.map((item) => (

@@ -9,8 +9,8 @@ import AsteticStick from "./AsteticStick";
 function OverviewCulinary() {
   const { locale } = useLocale();
   return (
-    <div className="w-full bg-mainLight dark:bg-submainDark p-10 flex gap-10">
-      <div className="w-1/2 p-10">
+    <div className="w-full bg-mainLight dark:bg-submainDark p-10 flex flex-col-reverse sm:flex-row gap-10">
+      <div className="sm:w-1/2 sm:p-10">
         <Image
           src="/assets/homepage/foto/foods1.png"
           width={500}
@@ -18,19 +18,19 @@ function OverviewCulinary() {
           className="w-[30rem] object-cover"
           alt="foods 1"
         />
-        <p className="text-black text-xl w-[35rem] my-5 dark:text-mainLight">
+        <p className="text-black text-base sm:text-xl sm:w-[35rem] my-5 dark:text-mainLight">
           {locale === "id"
             ? "Terdapat Berbagai Kuliner yang Menarik Saat Menjelajahi Pulau Nias. Cita Rasa yang Kaya dan Khas"
             : "There are various interesting culinary delights when exploring Nias Island. Taste Rich and Distinctive Flavors"}
         </p>
-        <ButtonPrimary>
+        <ButtonPrimary to="/tour">
           {locale === "id" ? "Lebih Lengkap" : "More Details"}
         </ButtonPrimary>
       </div>
-      <div className="w-1/2 p-10">
+      <div className="sm:w-1/2 sm:p-10">
         <AsteticStick />
         <h2
-          className="text-4xl my-7 dark:text-mainLight"
+          className="text-xl sm:text-4xl my-7 dark:text-mainLight"
           dangerouslySetInnerHTML={{
             __html:
               locale === "id"

@@ -8,6 +8,7 @@ import { Carousel } from "react-responsive-carousel";
 import { dataImagesCarousel } from "@/utils/homepage";
 import Image from "next/image";
 import { useLocale } from "@/contexts/LocaleContext";
+import ButtonPrimary from "./ButtonPrimary";
 
 function HeroScreen() {
   const { theme } = useTheme();
@@ -28,21 +29,21 @@ function HeroScreen() {
       />
       <div className="absolute top-0 left-0 w-full h-full flex items-center justify-between p-5">
         <div className="w-1/2 flex flex-col items-center">
-          <div className="bg-white/70 dark:bg-black/30 w-[32rem] p-10 backdrop-blur-md rounded-xl">
-            <h1 className="text-2xl font-semibold">
+          <div className="bg-white/70 dark:bg-black/30 w-[40rem] p-10 backdrop-blur-md rounded-xl mb-10">
+            <h1 className="text-3xl font-medium">
               {locale === "id"
-                ? "Gaya baru berwisata di Nias"
-                : "A new style of traveling on Nias"}
+                ? "Jelajahi Keindahan Budaya dan Ragam Pesona Pulau Nias"
+                : "Explore the Cultural Beauty and Various Enchantments of Nias Island"}
             </h1>
             <p className="text-lg mt-3">
               {locale === "id"
-                ? "Lebih dari keindahan alam, Nias juga menawarkan kekayaan budaya  yang unik. Suku Nias terkenal dengan tradisi lompat batu yang luar biasa, sebuah pertunjukan keberanian dan kekuatan yang mempesona"
-                : "More than natural beauty, Nias also offers a rich culture that is unique. The Nias tribe is famous for its extraordinary stone jumping tradition, a dazzling display of courage and strength. tradition, a dazzling display of courage and strength."}
+                ? "Pulau Nias, surga tersembunyi di barat Sumatera, menawarkan pengalaman wisata yang tak terlupakan. Keindahan alam yang memesona, budaya yang kaya, kuliner yang khas, dan keramahan penduduknya menjadikan Nias destinasi ideal bagi para penjelajah sejati"
+                : "Nias Island, a hidden paradise in western Sumatra, offers an unforgettable travel experience. Breathtaking natural beauty, rich culture, distinctive cuisine and the hospitality of its people make Nias an ideal destination for true explorers."}
             </p>
           </div>
-          <Button className="bg-main text-lg dark:hover:bg-gray-700 text-white rounded-full px-10 py-6 mt-5 shadow-lg">
+          <ButtonPrimary>
             {locale === "id" ? "Mulai Sekarang" : "Get Started Now"}
-          </Button>
+          </ButtonPrimary>
         </div>
         <div className="w-1/2">
           <Carousel
@@ -53,7 +54,7 @@ function HeroScreen() {
             showIndicators={false}
             showStatus={false}
             interval={2000}
-            className="w-[50rem] h-[40rem] p-5 rounded-3xl relative"
+            className="w-[45rem] h-[40rem] mt-20 overflow-hidden rounded-3xl relative"
           >
             {dataImagesCarousel.map((item, index) => (
               <Image
@@ -61,7 +62,7 @@ function HeroScreen() {
                 key={index}
                 width={500}
                 height={650}
-                className="rounded-3xl h-[43rem] object-cover"
+                className="h-[43rem] object-cover"
                 alt="slide-1"
               />
             ))}

@@ -6,6 +6,7 @@ import { TypewriterEffectSmooth } from "../ui/typewriter-effect";
 import Link from "next/link";
 import { Button } from "../ui/button";
 import Image from "next/image";
+import AsteticStick from "./AsteticStick";
 
 function OverviewCulture() {
   const { locale } = useLocale();
@@ -23,8 +24,11 @@ function OverviewCulture() {
   return (
     <>
       {/* Hero Section */}
-      <div className="w-full h-fit bg-white dark:bg-[#0f0f0f] flex flex-col-reverse lg:flex-row justify-center lg:justify-between items-center pt-36 pb-12 sm:pb-16 px-12 lg:px-20">
+      <div className="w-full h-fit bg-white dark:bg-[#0f0f0f] flex flex-col-reverse lg:flex-row justify-center lg:justify-between items-center py-32 px-12 lg:px-20">
         <div className="flex flex-col justify-start space-y-4 lg:w-[55%] mt-5 lg:mt-0">
+          <div className="mb-5">
+            <AsteticStick />
+          </div>
           <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-semibold leading-[2rem] sm:leading-[3.5rem]">
             {locale === "id"
               ? "Temukan Kebudayaan Daerah dan Destinasi Wisata dari"

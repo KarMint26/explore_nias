@@ -54,7 +54,7 @@ function CardWisata({
         <CardItem
           as={"button"}
           translateZ={50}
-          className="text-white border text-xl absolute left-4 transform -translate-x-1/2 -translate-y-1/2 drop-shadow-xl bottom-5 px-5 py-3 rounded-xl w-80 border-white bg-white/40 backdrop-blur-sm"
+          className="text-white border text-xl absolute left-4 transform -translate-x-1/2 -translate-y-1/2 drop-shadow-xl bottom-5 px-5 py-3 rounded-xl w-80 border-white bg-white/40 backdrop-blur-md"
         >
           {locale === "id" ? nameId : nameEn}
         </CardItem>
@@ -74,11 +74,11 @@ function OverviewWisata() {
             : '"Explore the wonders of Nias Island, a place where tropical natural beauty meets a rich and distinctive culture."'}
         </p>
         <div className="text-right">
-          <div className="flex flex-row-reverse mb-3">
+          <div className="flex flex-row-reverse mb-5">
             <AsteticStick />
           </div>
 
-          <h3 className="text-3xl text-main mb-3">
+          <h3 className="text-4xl text-main mb-5">
             {locale === "id" ? "Destinasi Wisata" : "Tourism Destination"}
           </h3>
           <ButtonPrimary>

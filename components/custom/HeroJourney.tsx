@@ -17,8 +17,8 @@ export default function HeroJourney() {
             ? "Membawa Anda Pengalaman Berharga di Explorenias"
             : "Bringing You Valuable Experience in Explorenias"}
         </h2>
-        <div className="w-full flex items-center justify-between bg-main p-5 rounded-t-[5rem]">
-          <div className="w-1/2 my-10 ml-20">
+        <div className="w-full flex items-center justify-center bg-main dark:bg-submainDark p-5 rounded-t-[5rem]">
+          <div className=" my-10 ml-20">
             <h3 className="text-4xl text-white">
               {locale === "id"
                 ? "Perjalanan Ke Pulau Nias"

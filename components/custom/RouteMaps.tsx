@@ -5,6 +5,7 @@ import { IoIosArrowDown, IoIosArrowUp } from "react-icons/io";
 import { Button } from "../ui/button";
 import { useLocale } from "@/contexts/LocaleContext";
 import Image from "next/image";
+import { FiChevronsDown, FiChevronsUp } from "react-icons/fi";
 
 type ItemType = {
   name: string;
@@ -195,7 +196,7 @@ function RouteMaps() {
           className="text-lg hover:bg-transparent bg-transparent shadow-none text-main self-center rounded-full px-10 py-5 mt-5"
           onClick={() => setShowDetailRoute(true)}
         >
-          <IoIosArrowUp className="text-4xl font-bold text-black dark:text-white" />
+          <FiChevronsUp className="text-4xl font-bold text-black dark:text-white" />
         </Button>
 
         <h3 className="text-main text-3xl mb-8 text-center">
@@ -204,7 +205,7 @@ function RouteMaps() {
             : "Choose Your Trip from"}
         </h3>
 
-        <div className="w-full py-20 px-16 mb-10 bg-mainLight  items-center rounded-t-[5rem] flex justify-between">
+        <div className="w-full py-20 px-16 mb-10 bg-mainLight dark:bg-submainDark items-center rounded-t-[5rem] flex justify-between">
           {dataMaps.map((item, index) => (
             <div
               className="w-80 relative cursor-pointer"
@@ -236,7 +237,7 @@ function RouteMaps() {
             className="text-lg hover:bg-transparent bg-transparent shadow-none text-main dark:text-white self-center rounded-full px-10 py-5 mt-5"
             onClick={() => setShowDetailRoute(false)}
           >
-            <IoIosArrowDown className="text-4xl font-bold text-black dark:text-white" />
+            <FiChevronsDown className="text-4xl font-bold text-black dark:text-white" />
           </Button>
 
           <h3 className="text-main text-3xl mb-5 text-center">
@@ -245,7 +246,7 @@ function RouteMaps() {
               : "Exploring the Precious Experience at Explorenias"}
           </h3>
 
-          <div className=" flex items-center">
+          <div className="flex items-center">
             <div className="roadmap w-[40rem]">
               <h3 className="text-3xl text-main">{routeActive}</h3>
 

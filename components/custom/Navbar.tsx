@@ -97,7 +97,7 @@ export default function Navbar({
           <div>{locale === "id" ? "Artikel" : "Article"}</div>
         </Link>
         <Link
-          href="/culinary"
+          href="/gallery"
           onClick={() => setActiveNav(false)}
           className="list-menu text-main flex py-2 pl-[25%] sm:pl-[35%] items-center space-x-2 sm:space-x-4 uppercase font-semibold"
         >
@@ -155,7 +155,7 @@ export default function Navbar({
           <ListItem
             activeLink={activeLink}
             text={locale === "id" ? "Galeri" : "Gallery"}
-            href="/culinary"
+            href="/gallery"
             icon={<BiSolidPhotoAlbum className="text-xl" />}
           />
         </div>

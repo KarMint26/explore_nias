@@ -216,6 +216,7 @@ function RouteMaps() {
           <div className="w-full py-20 px-16 sm:px-5 lg:px-20 mb-10 bg-[#5A574A] dark:bg-submainDark items-center rounded-t-[5rem] flex flex-col sm:flex-row justify-between">
             {dataMaps.map((item, index) => (
               <div
+                key={index}
                 className="w-80 relative cursor-pointer"
                 onClick={() => {
                   setDataRoute(item.timeLine);

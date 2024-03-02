@@ -1,6 +1,6 @@
 "use client";
 
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { useTheme } from "next-themes";
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 import { Carousel } from "react-responsive-carousel";
@@ -12,15 +12,20 @@ import ButtonPrimary from "./ButtonPrimary";
 function HeroScreen() {
   const { theme } = useTheme();
   const { locale } = useLocale();
+  const [videoSrc, setVideoSrc] = useState("");
+
+  useEffect(() => {
+    const src =
+      theme === "light"
+        ? "/assets/homepage/video/homepage.mp4"
+        : "/assets/homepage/video/homepage-dark.mp4";
+    setVideoSrc(src);
+  }, [theme]);
 
   return (
     <div className="w-full h-screen flex justify-center items-center relative">
       <video
-        src={
-          theme === "light"
-            ? "/assets/homepage/video/homepage.mp4"
-            : "/assets/homepage/video/homepage-dark.mp4"
-        }
+        src={videoSrc}
         className="w-full h-screen object-cover"
         autoPlay
         loop

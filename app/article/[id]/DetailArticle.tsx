@@ -48,7 +48,7 @@ export default function DetailArticle({ params }: { params: any }) {
               <Calendar size={20} color="#9C9680" className="scale-90 sm:scale-100" />
               {detail.datetime}
             </div>
-            <p className="text-xs sm:text-base text-justify">{detail.text}</p>
+            <p className="text-sm sm:text-base text-justify">{detail.text}</p>
           </div>
         </>
       ) : (

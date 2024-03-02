@@ -9,7 +9,7 @@ import CardSkeleton from "./CardSkeleton";
 function OverviewGallery() {
   const { locale } = useLocale();
   return (
-    <div className="w-full bg-mainLight dark:bg-submainDark px-10 py-20 flex flex-col items-center justify-center relative">
+    <div className="w-full bg-mainLight dark:bg-darkBg px-10 py-20 flex flex-col items-center justify-center relative">
       <AsteticStick />
       <h2
         className="text-xl sm:text-4xl my-5 text-center"

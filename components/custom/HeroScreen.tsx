@@ -1,7 +1,6 @@
 "use client";
 
-import React, { useEffect } from "react";
-import { Button } from "@/components/ui/button";
+import React from "react";
 import { useTheme } from "next-themes";
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 import { Carousel } from "react-responsive-carousel";
@@ -9,7 +8,6 @@ import { dataImagesCarousel } from "@/utils/homepage";
 import Image from "next/image";
 import { useLocale } from "@/contexts/LocaleContext";
 import ButtonPrimary from "./ButtonPrimary";
-import Link from "next/link";
 
 function HeroScreen() {
   const { theme } = useTheme();
@@ -98,7 +96,7 @@ function HeroScreen() {
             showIndicators={false}
             showStatus={false}
             interval={2000}
-            className="w-full lg:w-[45rem] lg:h-[40rem] mt-32 lg:mt-20 overflow-hidden rounded-3xl relative"
+            className="w-full lg:w-[40rem] lg:h-[35rem] mt-32 lg:mt-20 overflow-hidden rounded-3xl relative"
           >
             {dataImagesCarousel.map((item, index) => (
               <Image

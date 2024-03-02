@@ -12,6 +12,7 @@ import Image from "next/image";
 import React, { useState } from "react";
 import DetailCulture from "./DetailCulture";
 import Link from "next/link";
+import ButtonPrimary from "@/components/custom/ButtonPrimary";
 
 const Culture = () => {
   const { locale } = useLocale();
@@ -56,14 +57,9 @@ const Culture = () => {
                   : "There is something interesting about exploring Nias.  New Place, New Beauty.",
             }}
           />
-          <Link href="#culture-section" className="w-fit h-fit">
-            <Button
-              size="lg"
-              className="bg-main rounded-full text-sm sm:text-base w-fit hover:bg-submainDark dark:hover:bg-[#c0b99d]"
-            >
-              {locale === "id" ? "Lihat Selengkapnya" : "View More"}
-            </Button>
-          </Link>
+          <ButtonPrimary to="#culture-section">
+            {locale === "id" ? "Lihat Selengkapnya" : "View More"}
+          </ButtonPrimary>
         </div>
         <Image
           src="/assets/Culture/hero.svg"

@@ -20,8 +20,8 @@ function OverviewCulinary() {
         />
         <p className="text-black text-base sm:text-xl sm:w-[35rem] my-5 dark:text-mainLight">
           {locale === "id"
-            ? "Terdapat Berbagai Kuliner yang Menarik Saat Menjelajahi Pulau Nias. Cita Rasa yang Kaya dan Khas"
-            : "There are various interesting culinary delights when exploring Nias Island. Taste Rich and Distinctive Flavors"}
+            ? "Terdapat Berbagai Kuliner yang Menarik Saat Menjelajahi Nias. Cita Rasa yang Kaya dan Khas"
+            : "There are various interesting culinary delights when exploring Nias . Taste Rich and Distinctive Flavors"}
         </p>
         <ButtonPrimary to="/tour">
           {locale === "id" ? "Lebih Lengkap" : "More Details"}
@@ -34,7 +34,7 @@ function OverviewCulinary() {
           dangerouslySetInnerHTML={{
             __html:
               locale === "id"
-                ? "Eksplorasi Cita Rasa Kuliner <br /> Khas Pulau Nias"
+                ? "Eksplorasi Cita Rasa Kuliner <br /> Khas Nias"
                 : "Exploration of Nias's Distinctive <br /> Culinary Flavors",
           }}
         ></h2>

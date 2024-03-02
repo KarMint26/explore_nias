@@ -42,7 +42,7 @@ function CardWisata({
 
   return (
     <CardContainer>
-      <CardBody className="w-[14rem] h-[20rem] mr-5 sm:mr-0 sm:w-[22rem] sm:h-[30rem] mt-5 rounded-t-full bg-main relative">
+      <CardBody className="w-[14rem] h-[20rem] mr-5 sm:mr-0 sm:w-[20rem] sm:h-[28rem] mt-5 rounded-t-full bg-main relative">
         <CardItem className="w-full h-full">
           <Image
             src={image}
@@ -54,7 +54,7 @@ function CardWisata({
         <CardItem
           as={"button"}
           translateZ={70}
-          className="text-white border text-base sm:text-xl absolute sm:left-4 transform -translate-x-1/2 -translate-y-1/2 drop-shadow-xl bottom-5 px-5 py-3 rounded-xl w-full sm:w-80 border-white bg-white/40 backdrop-blur-md"
+          className="text-white border text-base sm:text-xl absolute sm:left-4 transform -translate-x-1/2 -translate-y-1/2 drop-shadow-xl bottom-5 px-5 py-3 rounded-xl w-full sm:w-[18rem] border-white bg-white/40 backdrop-blur-md"
         >
           {locale === "id" ? nameId : nameEn}
         </CardItem>

@@ -34,7 +34,7 @@ const Article = () => {
             <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-semibold leading-[2rem] sm:leading-[3.5rem] tracking-wide">
               {listArticle[0].title}
             </h1>
-            <p className="text-[0.7rem] sm:text-base lg:text-xl text-justify">
+            <p className="text-sm sm:text-base lg:text-xl text-justify">
               {listArticle[0].text.substring(0,300) + "..."}
             </p>
             <Link href="/article/1" className="w-fit h-fit">

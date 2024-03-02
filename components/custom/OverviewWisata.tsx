@@ -42,7 +42,7 @@ function CardWisata({
 
   return (
     <CardContainer>
-      <CardBody className="w-[14rem] h-[20rem] mr-5 sm:mr-0 sm:w-[20rem] sm:h-[28rem] mt-5 rounded-t-full bg-main relative">
+      <CardBody className="w-[14rem] h-[20rem] mr-5 sm:mr-0 lg:w-[20rem] lg:h-[28rem] mt-5 sm:mt-0 rounded-t-full bg-main relative">
         <CardItem className="w-full h-full">
           <Image
             src={image}
@@ -54,7 +54,7 @@ function CardWisata({
         <CardItem
           as={"button"}
           translateZ={70}
-          className="text-white border text-base sm:text-xl absolute sm:left-4 transform -translate-x-1/2 -translate-y-1/2 drop-shadow-xl bottom-5 px-5 py-3 rounded-xl w-full sm:w-[18rem] border-white bg-white/40 backdrop-blur-md"
+          className="text-white border text-base lg:text-xl absolute lg:left-4 transform -translate-x-1/2 -translate-y-1/2 drop-shadow-xl bottom-5 px-5 py-3 rounded-xl w-full lg:w-[18rem] border-white bg-white/40 backdrop-blur-md"
         >
           {locale === "id" ? nameId : nameEn}
         </CardItem>
@@ -66,8 +66,8 @@ function OverviewWisata() {
   const { locale } = useLocale();
 
   return (
-    <div className="w-full bg-white dark:bg-darkBg p-10" id="tourism-section">
-      <div className="flex w-full justify-between items-center flex-col-reverse sm:flex-row">
+    <div className="w-full bg-white dark:bg-darkBg" id="tourism-section">
+      <div className="flex w-full p-10 justify-between items-center flex-col-reverse sm:flex-row lg:flex-row">
         <p className="text-sm sm:text-xl text-main sm:w-[28rem] mt-5 text-center">
           {locale === "id"
             ? '"Jelajahi keajaiban Pulau Nias, tempat di mana keindahan alam tropis bertemu dengan kekayaan budaya yang khas."'
@@ -87,7 +87,7 @@ function OverviewWisata() {
         </div>
       </div>
 
-      <div className="w-full flex justify-between mt-5 px-10 overflow-x-auto">
+      <div className="w-full flex justify-between gap-5 mt-5 px-10 overflow-x-auto">
         {dataWisata.map((item) => (
           <CardWisata key={item.nameEn} {...item} />
         ))}

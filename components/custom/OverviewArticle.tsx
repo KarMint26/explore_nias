@@ -12,21 +12,23 @@ function OverviewArticle() {
   const article = getArticle();
 
   return (
-    <div className="w-full p-5 sm:p-10 sm:px-20 bg-white dark:bg-submainDark mt-5 flex flex-col sm:flex-row">
-      <Image
-        src="/assets/homepage/foto/reads.png"
-        width={500}
-        height={500}
-        className="sm:w-[38rem] scale-75 object-cover"
-        alt="hero-1"
-      />
-      <div className="w-full mt-7 sm:mt-0">
+    <div className="w-full p-5 lg:p-10 lg:px-20 bg-white dark:bg-submainDark mt-5 flex flex-col lg:flex-row">
+      <div className="w-full flex items-cente justify-center">
+        <Image
+          src="/assets/homepage/foto/reads.png"
+          width={500}
+          height={500}
+          className="lg:w-[38rem] scale-75 object-cover"
+          alt="hero-1"
+        />
+      </div>
+      <div className="w-full mt-7 lg:mt-0">
         <div className="flex flex-col">
-          <div className="w-full flex sm:flex-row-reverse">
+          <div className="w-full flex lg:flex-row-reverse">
             <AsteticStick />
           </div>
           <h3
-            className="text-xl sm:text-4xl my-5 text-left sm:text-right"
+            className="text-xl sm:text-4xl my-5 text-left text-main lg:text-right"
             dangerouslySetInnerHTML={{
               __html:
                 locale === "id"
@@ -35,31 +37,31 @@ function OverviewArticle() {
             }}
           ></h3>
 
-          <div className="w-full flex sm:flex-row-reverse">
+          <div className="w-full flex lg:flex-row-reverse">
             <ButtonPrimary to="/article">
               {locale === "id" ? "Lebih Lengkap" : "View More"}
             </ButtonPrimary>
           </div>
         </div>
 
-        <div className="rounded-3xl bg-mainLight p-5 sm:p-10 mt-10 flex flex-col-reverse sm:flex-row">
-          <div className="sm:w-1/2">
-            <h4 className="text-2xl sm:text-3xl my-3 sm:my-5 font-semibold dark:text-slate-700">
+        <div className="rounded-3xl bg-mainLight p-5 lg:p-10 mt-10 flex flex-col-reverse lg:flex-row">
+          <div className="lg:w-1/2">
+            <h4 className="text-2xl lg:text-2xl my-3 lg:my-5 dark:text-slate-700">
               {article[0].title}
             </h4>
-            <p className="mb-3 sm:mb-5 text-justify dark:text-gray-500 text-sm">
-              {article[0].text.substring(0,250) + "..."}
+            <p className="mb-3 lg:mb-5 text-justify dark:text-gray-500 text-sm">
+              {article[0].text.substring(0, 250) + "..."}
             </p>
             <ButtonPrimary to="/article/1">
               {locale === "id" ? "Baca Selengkapnya" : "Read More"}
             </ButtonPrimary>
           </div>
-          <div className="sm:w-1/2 sm:p-10">
+          <div className="lg:w-1/2 lg:p-10">
             <Image
               src="/assets/Article/image-1.jpg"
               width={500}
               height={500}
-              className="w-[30rem] object-cover rounded-md"
+              className="w-full sm:h-[20rem] lg:h-auto lg:w-[35rem] object-cover rounded-md"
               alt="hero-1"
             />
           </div>

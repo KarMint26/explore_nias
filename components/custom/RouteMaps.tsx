@@ -213,7 +213,7 @@ function RouteMaps() {
               : "Choose Your Trip from"}
           </h3>
 
-          <div className="w-full py-20 px-16 mb-10 bg-[#5A574A] dark:bg-submainDark items-center rounded-t-[5rem] flex flex-col sm:flex-row justify-between">
+          <div className="w-full py-20 px-16 sm:px-5 lg:px-20 mb-10 bg-[#5A574A] dark:bg-submainDark items-center rounded-t-[5rem] flex flex-col sm:flex-row justify-between">
             {dataMaps.map((item, index) => (
               <div
                 className="w-80 relative cursor-pointer"
@@ -256,8 +256,8 @@ function RouteMaps() {
           </h3>
 
           <div className="w-full bg-mainLight flex items-center justify-center pt-10 rounded-t-[5rem]">
-            <div className="flex w-1/2 flex-col-reverse justify-center sm:flex-row items-center">
-              <div className="roadmap sm:w-[40rem]">
+            <div className="flex sm:w-[80%] lg:w-1/2 flex-col-reverse justify-center sm:flex-row items-center">
+              <div className="roadmap sm:w-[53rem] lg:w-[40rem]">
                 <h3 className="text-xl font-medium sm:text-3xl text-main">
                   {routeActive}
                 </h3>
@@ -287,7 +287,7 @@ function RouteMaps() {
                   alt="maps"
                   width={500}
                   height={500}
-                  className="w-full scale-75 object-cover"
+                  className="w-full scale-75 sm:scale-110 object-cover"
                 />
               </div>
             </div>

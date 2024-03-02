@@ -14,4 +14,23 @@ export type article = {
   url: string;
   isReverse: boolean;
   isDiff: boolean;
-}
+};
+
+export type tour = {
+  id: number;
+  nameId: string;
+  nameEn: string;
+  image: string;
+  descId: string;
+  descEn: string;
+  maps: string;
+};
+
+export type tourCulinary = {
+  id: number;
+  name: string;
+  image: string;
+  descId: string;
+  descEn: string;
+  maps: string;
+};

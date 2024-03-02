@@ -1,13 +1,26 @@
 "use client";
 import { useLocale } from "@/contexts/LocaleContext";
 import React from "react";
-import AsteticStick from "./AsteticStick";
-import CardWisata from "./CardWisata";
+import AsteticStick from "../../components/custom/AsteticStick";
+import CardWisata from "../../components/custom/CardWisata";
+import { Drawer, DrawerContent } from "../../components/ui/drawer";
+import DetailTour from "@/app/tour/DetailTour";
 
 function TourRegional() {
+  const [openDrawer, setOpenDrawer] = React.useState(false);
+  const [detailData, setDetailData] = React.useState({
+    id: 0,
+    nameId: "",
+    nameEn: "",
+    image: "",
+    descId: "",
+    descEn: "",
+    maps: "",
+  });
   const { locale } = useLocale();
   return (
-    <div>
+    <React.Fragment>
+      {/* head section */}
       <div className="flex w-full p-5 sm:p-10 justify-between items-center flex-col-reverse sm:flex-row lg:flex-row">
         <p className="text-sm sm:text-xl text-main sm:w-[28rem] mt-5 text-center">
           {locale === "id"
@@ -25,17 +38,38 @@ function TourRegional() {
         </div>
       </div>
 
+      {/* main section */}
       <div className="w-full flex flex-wrap justify-center items-center gap-5">
         {dataWisata.map((item) => (
           <CardWisata
-            key={item.nameId}
+            key={item.id}
             nameId={item.nameId}
             nameEn={item.nameEn}
             image={item.image}
+            onClick={() => {
+              setDetailData(item);
+              setOpenDrawer((prev) => !prev);
+            }}
           />
         ))}
       </div>
-    </div>
+
+      {/* Detail section */}
+      <Drawer open={openDrawer} onOpenChange={setOpenDrawer}>
+        <DrawerContent className="bg-submain dark:bg-[#0f0f0f] ring-0 outline-none border-main">
+          {detailData && (
+            <DetailTour
+              detailTour={detailData}
+              key={detailData.id}
+              locale={locale}
+              handleBackButton={() => {
+                setOpenDrawer(false);
+              }}
+            />
+          )}
+        </DrawerContent>
+      </Drawer>
+    </React.Fragment>
   );
 }
 
@@ -43,6 +77,7 @@ export default TourRegional;
 
 const dataWisata = [
   {
+    id: 1,
     nameId: "Desa Bawomataluo",
     nameEn: "Bawomataluo Village",
     image: "/assets/homepage/foto/bawomataluo.jpg",
@@ -53,6 +88,7 @@ const dataWisata = [
     maps: "https://maps.app.goo.gl/fpGDupwnETcdBsz37",
   },
   {
+    id: 2,
     nameId: "Museum Pusaka Nias",
     nameEn: "Nias Heritage Museum",
     image: "/assets/tour/musium.jpg",
@@ -63,6 +99,7 @@ const dataWisata = [
     maps: "https://maps.app.goo.gl/sSLPJp3EYJwjbyMr5",
   },
   {
+    id: 3,
     nameId: "Pantai Indah Tureloto",
     nameEn: "Tureloto Indah Beach",
     image: "/assets/tour/tureloto.jpg",
@@ -73,6 +110,7 @@ const dataWisata = [
     maps: "https://maps.app.goo.gl/LuPCjLowY7377C7X7",
   },
   {
+    id: 4,
     nameId: "Pantai Baloho",
     nameEn: "Baloho Beach",
     image: "/assets/tour/baloho.jpg",
@@ -83,6 +121,7 @@ const dataWisata = [
     maps: "https://maps.app.goo.gl/v7wx2W4xn4fRy5St5",
   },
   {
+    id: 5,
     nameId: "Pantai Sorake",
     nameEn: "Sorake Beach",
     image: "/assets/tour/sorake.jpg",
@@ -93,6 +132,7 @@ const dataWisata = [
     maps: "https://maps.app.goo.gl/kWDNCCSSf8LNfqze8",
   },
   {
+    id: 6,
     nameId: "Pulau Wunga",
     nameEn: "Wunga Island",
     image: "/assets/tour/wunga.jpg",
@@ -103,6 +143,7 @@ const dataWisata = [
     maps: "https://maps.app.goo.gl/21oDD316RWQTKAPx7",
   },
   {
+    id: 7,
     nameId: "Pulau Serambau",
     nameEn: "Serambau Island",
     image: "/assets/tour/serambau.jpg",
@@ -113,6 +154,7 @@ const dataWisata = [
     maps: "https://maps.app.goo.gl/pkKxysrx1RzeT5bE6",
   },
   {
+    id: 8,
     nameId: "Pulau Walo",
     nameEn: "Walo Island",
     image: "/assets/tour/walo.jpg",

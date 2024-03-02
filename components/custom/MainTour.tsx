@@ -2,8 +2,9 @@
 import { useLocale } from "@/contexts/LocaleContext";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@radix-ui/react-tabs";
 import React from "react";
-import TourRegional from "./TourRegional";
+import TourRegional from "../../app/tour/TourRegional";
 import AsteticStick from "./AsteticStick";
+import TourCulinary from "@/app/tour/TourCulinary";
 
 function MainTour() {
   const { locale } = useLocale();
@@ -21,9 +22,9 @@ function MainTour() {
         <TabsList className="grid sm:w-[400px] grid-cols-2 mb-3 p-3 bg-slate-100 dark:bg-gray-800 rounded-xl mx-auto sm:mb-5">
           <TabsTrigger
             value="tour"
-            className={`px-5 sm:text-xl font-medium text-main py-3 rounded-xl ${
+            className={`px-5 sm:text-lg font-medium text-main py-3 rounded-xl ${
               tabActive === "tour"
-                ? "shadow-md bg-white dark:bg-main text-mainLight"
+                ? "shadow-md bg-white dark:bg-main text-main dark:text-mainLight"
                 : "text-gray-400 hover:text-gray-400 hover:bg-slate-50 dark:hover:bg-slate-800/50 dark:text-slate-400"
             }`}
             onClick={() => setTabActive("tour")}
@@ -32,9 +33,9 @@ function MainTour() {
           </TabsTrigger>
           <TabsTrigger
             value="culinary"
-            className={`px-5 sm:text-xl text-main font-medium py-3 rounded-xl ${
+            className={`px-5 sm:text-lg text-main font-medium py-3 rounded-xl ${
               tabActive === "culinary"
-                ? "shadow-md bg-white dark:bg-main text-mainLight"
+                ? "shadow-md bg-white dark:bg-main text-main dark:text-mainLight"
                 : "text-gray-400 hover:text-gray-400 hover:bg-slate-50 dark:hover:bg-slate-800/50  dark:text-slate-400"
             }`}
             onClick={() => setTabActive("culinary")}
@@ -48,8 +49,11 @@ function MainTour() {
         >
           <TourRegional />
         </TabsContent>
-        <TabsContent value="culinary" className=" bg-white w-full rounded-xl">
-          Culinary
+        <TabsContent
+          value="culinary"
+          className="dark:bg-mainDark bg-white w-full rounded-xl"
+        >
+          <TourCulinary />
         </TabsContent>
       </Tabs>
     </div>

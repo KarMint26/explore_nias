@@ -12,7 +12,7 @@ function OverviewArticle() {
   const article = getArticle();
 
   return (
-    <div className="w-full p-5 lg:p-10 lg:px-20 bg-white dark:bg-submainDark mt-5 flex flex-col lg:flex-row">
+    <div className="w-full p-5 lg:p-10 lg:px-20 bg-white dark:bg-darkBg mt-5 flex flex-col lg:flex-row">
       <div className="w-full flex items-cente justify-center">
         <Image
           src="/assets/homepage/foto/reads.png"
@@ -44,12 +44,12 @@ function OverviewArticle() {
           </div>
         </div>
 
-        <div className="rounded-3xl bg-mainLight dark:bg-mainDark p-5 lg:p-10 mt-10 flex flex-col-reverse lg:flex-row">
+        <div className="rounded-3xl bg-mainLight dark:bg-[#53524e] p-5 lg:p-10 mt-10 flex flex-col-reverse lg:flex-row">
           <div className="lg:w-1/2">
-            <h4 className="text-2xl lg:text-2xl my-3 lg:my-5 dark:text-white">
+            <h4 className="text-2xl lg:text-2xl my-3 lg:my-5">
               {article[0].title}
             </h4>
-            <p className="mb-3 lg:mb-5 text-justify dark:text-slate-300 text-sm">
+            <p className="mb-3 lg:mb-5 text-justify text-sm">
               {article[0].text.substring(0, 250) + "..."}
             </p>
             <ButtonPrimary to="/article/1">

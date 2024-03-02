@@ -199,7 +199,7 @@ function RouteMaps() {
   return (
     <div className="w-full relative">
       {!showDetailRoute && (
-        <div className="w-full bg-white  dark:bg-darkBg flex flex-col">
+        <div className="w-full bg-white dark:bg-darkBg flex flex-col">
           <Button
             className="text-lg hover:bg-transparent bg-transparent shadow-none text-main self-center rounded-full px-10 py-5 mt-5"
             onClick={() => setShowDetailRoute(true)}

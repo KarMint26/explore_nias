@@ -1,5 +1,6 @@
 import { Metadata } from "next";
 import React from "react";
+import Gallery from "./Gallery";
 
 export const metadata: Metadata = {
   title: "Gallery",
@@ -7,8 +8,8 @@ export const metadata: Metadata = {
     "Mengenal Lebih Dekat Nias dan Kekayaan Budayanya Serta Keindahan Alamnya.",
 };
 
-const Gallery = () => {
-  return <div>Gallery</div>;
+const GaleryPage = () => {
+  return <Gallery />;
 };
 
-export default Gallery;
+export default GaleryPage;

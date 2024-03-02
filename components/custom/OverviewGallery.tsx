@@ -65,21 +65,21 @@ const cards = [
     id: 1,
     content: <Skeleton1 />,
     className:
-      "w-[10rem] h-[14rem] sm:w-[20rem] sm:h-[28rem] rounded-[5rem] object-cover sm:mx-5 cursor-pointer",
+      "w-[10rem] h-[14rem] sm:w-[20rem] sm:h-[28rem] rounded-[5rem] object-cover  cursor-pointer",
     thumbnail: "/assets/homepage/foto/0.jpg",
   },
   {
     id: 2,
     content: <Skeleton2 />,
     className:
-      "w-[10rem] h-[14rem] sm:w-[20rem] sm:h-[28rem] rounded-[5rem] object-cover sm:mx-5 cursor-pointer",
+      "w-[10rem] h-[14rem] sm:w-[20rem] sm:h-[28rem] rounded-[5rem] object-cover  cursor-pointer",
     thumbnail: "/assets/homepage/foto/1.png",
   },
   {
     id: 3,
     content: <Skeleton3 />,
     className:
-      "w-[10rem] h-[14rem] sm:w-[20rem] sm:h-[28rem] rounded-[5rem] object-cover sm:mx-5 cursor-pointer",
+      "w-[10rem] h-[14rem] sm:w-[20rem] sm:h-[28rem] rounded-[5rem] object-cover  cursor-pointer",
     thumbnail: "/assets/homepage/foto/2.png",
   },
 ];

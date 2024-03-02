@@ -16,9 +16,9 @@ function HeroScreen() {
 
   useEffect(() => {
     const src =
-      theme === "light"
-        ? "/assets/homepage/video/homepage.mp4"
-        : "/assets/homepage/video/homepage-dark.mp4";
+      theme === "dark"
+        ? "/assets/homepage/video/homepage-dark.mp4"
+        : "/assets/homepage/video/homepage.mp4";
     setVideoSrc(src);
   }, [theme]);
 

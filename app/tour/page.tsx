@@ -1,3 +1,5 @@
+import HeroTour from "@/components/custom/HeroTour";
+import MainTour from "@/components/custom/MainTour";
 import { Metadata } from "next";
 import React from "react";
 
@@ -8,7 +10,12 @@ export const metadata: Metadata = {
 };
 
 const Tour = () => {
-  return <div>Tour</div>;
+  return (
+    <>
+      <HeroTour />
+      <MainTour />
+    </>
+  );
 };
 
 export default Tour;

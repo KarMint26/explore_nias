@@ -8,10 +8,12 @@ function CardWisata({
   nameId,
   nameEn,
   image,
+  onClick = () => {},
 }: {
   nameId: string;
   nameEn: string;
   image: string;
+  onClick?: () => void;
 }) {
   const { locale } = useLocale();
 
@@ -26,12 +28,13 @@ function CardWisata({
             alt="wisata"
           />
         </CardItem>
-        <CardItem
-          as={"button"}
-          translateZ={70}
-          className="text-white border text-base lg:text-xl absolute lg:left-4 transform -translate-x-1/2 -translate-y-1/2 drop-shadow-xl bottom-5 px-5 py-3 rounded-xl w-full lg:w-[18rem] border-white bg-white/40 backdrop-blur-md"
-        >
-          {locale === "id" ? nameId : nameEn}
+        <CardItem translateZ={70} className="w-full">
+          <div
+            className="text-white border text-base lg:text-xl absolute left-1/2 transform -translate-x-1/2 -translate-y-1/2 drop-shadow-xl bottom-5 px-5 py-3 rounded-xl w-full lg:w-72 border-white bg-white/40 backdrop-blur-md text-center"
+            onClick={onClick}
+          >
+            {locale === "id" ? nameId : nameEn}
+          </div>
         </CardItem>
       </CardBody>
     </CardContainer>

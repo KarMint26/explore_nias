@@ -11,7 +11,6 @@ import { Drama, Search } from "lucide-react";
 import Image from "next/image";
 import React, { useState } from "react";
 import DetailCulture from "./DetailCulture";
-import Link from "next/link";
 import ButtonPrimary from "@/components/custom/ButtonPrimary";
 
 const Culture = () => {

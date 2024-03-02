@@ -93,7 +93,7 @@ function HeroScreen() {
                 ? "Jelajahi Keindahan Budaya dan Ragam Pesona Pulau Nias"
                 : "Explore the Cultural Beauty and Various Enchantments of Nias Island"}
             </h1>
-            <p className="text-base lg:text-lg mt-3 mb-4">
+            <p className="text-base lg:text-lg mt-3 mb-4 text-justify">
               {locale === "id"
                 ? "Pulau Nias, surga tersembunyi di barat Sumatera, menawarkan pengalaman wisata yang tak terlupakan. Keindahan alam yang memesona, budaya yang kaya, kuliner yang khas, dan keramahan penduduknya menjadikan Nias destinasi ideal bagi para penjelajah sejati"
                 : "Nias Island, a hidden paradise in western Sumatra, offers an unforgettable travel experience. Breathtaking natural beauty, rich culture, distinctive cuisine and the hospitality of its people make Nias an ideal destination for true explorers."}

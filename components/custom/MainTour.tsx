@@ -1,6 +1,6 @@
 "use client";
 import { useLocale } from "@/contexts/LocaleContext";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@radix-ui/react-tabs";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import React from "react";
 import TourRegional from "../../app/tour/TourRegional";
 import AsteticStick from "./AsteticStick";
@@ -19,13 +19,13 @@ function MainTour() {
         {locale === "id" ? "Kategori Wisata" : "Tourism Category"}
       </h3>
       <Tabs defaultValue="tour" className="w-full">
-        <TabsList className="grid sm:w-[400px] grid-cols-2 mb-3 p-3 bg-slate-100 dark:bg-gray-800 rounded-xl mx-auto sm:mb-5">
+        <TabsList className="grid sm:w-[400px] h-fit grid-cols-2 mb-3 p-3 bg-gray-400 dark:bg-gray-800 rounded-xl mx-auto sm:mb-5 space-x-2 sm:space-x-3">
           <TabsTrigger
             value="tour"
             className={`px-5 sm:text-lg font-medium text-main py-3 rounded-xl ${
               tabActive === "tour"
                 ? "shadow-md bg-white dark:bg-main text-main dark:text-mainLight"
-                : "text-gray-400 hover:text-gray-400 hover:bg-slate-50 dark:hover:bg-slate-800/50 dark:text-slate-400"
+                : "text-white hover:text-gray-700 hover:bg-slate-50 dark:hover:bg-slate-800/50 dark:text-slate-400"
             }`}
             onClick={() => setTabActive("tour")}
           >
@@ -36,7 +36,7 @@ function MainTour() {
             className={`px-5 sm:text-lg text-main font-medium py-3 rounded-xl ${
               tabActive === "culinary"
                 ? "shadow-md bg-white dark:bg-main text-main dark:text-mainLight"
-                : "text-gray-400 hover:text-gray-400 hover:bg-slate-50 dark:hover:bg-slate-800/50  dark:text-slate-400"
+                : "text-white hover:text-gray-700 hover:bg-slate-50 dark:hover:bg-slate-800/50  dark:text-slate-400"
             }`}
             onClick={() => setTabActive("culinary")}
           >

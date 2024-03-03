@@ -30,7 +30,7 @@ function CardWisata({
         </CardItem>
         <CardItem translateZ={70} className="w-full">
           <div
-            className="text-white border text-base lg:text-xl absolute left-1/2 transform -translate-x-1/2 -translate-y-1/2 drop-shadow-2xl bottom-5 px-5 py-3 rounded-xl w-full lg:w-72 border-white bg-white/30 backdrop-blur-md text-center"
+            className="text-white border text-base lg:text-xl absolute left-1/2 transform -translate-x-1/2 -translate-y-1/2 drop-shadow-2xl bottom-5 px-5 py-3 rounded-xl w-full lg:w-72 border-white bg-white/30 backdrop-blur-md text-center cursor-pointer"
             onClick={onClick}
           >
             <span className="drop-shadow-lg">

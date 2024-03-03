@@ -79,81 +79,81 @@ const dataCulinary = [
   {
     id: 1,
     name: "Hambae nititi",
-    image: "/assets/homepage/foto/bawomataluo.jpg",
+    image: "/assets/tour/culinary/Hambae Nititi.jpg",
     descId:
       "Hambae Nititi adalah masakan khas Nias yang terbuat dari ikan asap. Ikan yang digunakan biasanya adalah ikan tongkol, cakalang, atau tuna. Ikan diasapi terlebih dahulu kemudian dicampur dengan bumbu kacang, cabai, dan bawang merah. Hambae Nititi biasanya disajikan dengan nasi putih atau ubi jalar.",
     descEn:
       "Hambae Nititi is a typical Nias dish made from smoked fish. The fish used is usually tuna, skipjack, or tuna. The fish is smoked first and then mixed with peanut sauce, chili, and shallots. Hambae Nititi is usually served with white rice or sweet potatoes.",
-    maps: "https://maps.app.goo.gl/fpGDupwnETcdBsz37",
+    maps: "https://maps.app.goo.gl/Bd9o3uGGvF8at3sf8",
   },
   {
     id: 2,
     name: "Babae",
-    image: "/assets/tour/musium.jpg",
+    image: "/assets/tour/culinary/Babae.jpg",
     descId:
       "Babae adalah masakan khas Nias yang terbuat dari daun singkong. Daun singkong ditumbuk halus kemudian dicampur dengan santan, kelapa parut, dan bumbu-bumbu lainnya. Babae biasanya dibungkus dengan daun pisang dan dimasak dengan cara dibakar.",
     descEn:
       "Babae is a Nias dish made from cassava leaves. Cassava leaves are finely ground and then mixed with coconut milk, grated coconut and other spices. Babae is usually wrapped in banana leaves and cooked by grilling.",
-    maps: "https://maps.app.goo.gl/sSLPJp3EYJwjbyMr5",
+    maps: "https://maps.app.goo.gl/kBn17sAD15zeLNcr9",
   },
   {
     id: 3,
     name: "Harinake",
-    image: "/assets/tour/tureloto.jpg",
+    image: "/assets/tour/culinary/Harinake.jpg",
     descId:
       "Harinake adalah masakan khas Nias yang terbuat dari daging babi. Daging babi dimasak dengan santan, cabai, dan bumbu-bumbu lainnya. Harinake biasanya disajikan dengan nasi putih atau ubi jalar.",
     descEn:
       "Harinake is a Nias dish made from pork. The pork is cooked with coconut milk, chili, and other spices. Harinake is usually served with white rice or sweet potatoes.",
-    maps: "https://maps.app.goo.gl/LuPCjLowY7377C7X7",
+    maps: "https://maps.app.goo.gl/Hy6yi4Ufawnk9mD36",
   },
   {
     id: 4,
     name: "Kofo-kofo",
-    image: "/assets/tour/baloho.jpg",
+    image: "/assets/tour/culinary/Kofokofo.jpg",
     descId:
       "Kofo-kofo adalah masakan khas Nias yang terbuat dari ikan asin. Ikan asin ditumbuk halus kemudian dicampur dengan santan, cabai, dan bumbu-bumbu lainnya. Kofo-kofo biasanya disajikan dengan nasi putih atau ubi jalar.",
     descEn:
       "Kofo-kofo is a Nias dish made from salted fish. The salted fish is finely ground and then mixed with coconut milk, chili, and other spices. Kofo-kofo is usually served with white rice or sweet potatoes.",
-    maps: "https://maps.app.goo.gl/v7wx2W4xn4fRy5St5",
+    maps: "https://maps.app.goo.gl/MCqc5fXNCc25wsVn9",
   },
   {
     id: 5,
     name: "Gowi nifufu",
-    image: "/assets/tour/sorake.jpg",
+    image: "/assets/tour/culinary/Gowi.jpg",
     descId:
       "Gowi Nifufu adalah masakan khas Nias yang terbuat dari ubi tumbuk. Ubi tumbuk dicampur dengan santan, kelapa parut, dan gula merah. Gowi Nifufu biasanya disajikan sebagai hidangan penutup.",
     descEn:
       "Gowi Nifufu is a Nias dish made from mashed sweet potato. Mashed sweet potato is mixed with coconut milk, grated coconut and brown sugar. Gowi Nifufu is usually served as dessert.",
-    maps: "https://maps.app.goo.gl/kWDNCCSSf8LNfqze8",
+    maps: "https://maps.app.goo.gl/Gex8PKS9aWkuxtXn7",
   },
   {
     id: 6,
     name: "Galame durian",
-    image: "/assets/tour/wunga.jpg",
+    image: "/assets/tour/culinary/Galame.jpg",
     descId:
       "Galame Durian adalah masakan khas Nias yang terbuat dari durian. Durian dihaluskan kemudian dicampur dengan santan, gula merah, dan tepung beras. Galame Durian biasanya disajikan sebagai hidangan penutup.",
     descEn:
       "Galame Durian is a Nias specialty made from durian. Durian is mashed then mixed with coconut milk, brown sugar, and rice flour. Galame Durian is usually served as dessert.",
-    maps: "https://maps.app.goo.gl/21oDD316RWQTKAPx7",
+    maps: "https://maps.app.goo.gl/kq4UUZmhXsKgb9ZA8",
   },
   {
     id: 7,
     name: "Sillio guro",
-    image: "/assets/tour/serambau.jpg",
+    image: "/assets/tour/culinary/Sillio.jpg",
     descId:
       "Sillio Guro adalah masakan khas Nias yang terbuat dari daun kelor. Daun kelor ditumbuk halus kemudian dicampur dengan santan, cabai, dan bumbu-bumbu lainnya. Sillio Guro biasanya disajikan dengan nasi putih atau ubi jalar.",
     descEn:
       "Sillio Guro is a typical Nias dish made from moringa leaves. Moringa leaves are finely ground and then mixed with coconut milk, chili, and other spices. Sillio Guro is usually served with white rice or sweet potatoes.",
-    maps: "https://maps.app.goo.gl/pkKxysrx1RzeT5bE6",
+    maps: "https://maps.app.goo.gl/kq4UUZmhXsKgb9ZA8",
   },
   {
     id: 8,
     name: "Bawi Ni Unago",
-    image: "/assets/tour/walo.jpg",
+    image: "/assets/tour/culinary/Bawi.jpg",
     descId:
       "Bawi Ni Unago adalah masakan khas Nias yang terbuat dari daging babi. Daging babi dimasak dengan santan, cabai, dan bumbu-bumbu lainnya. Bawi Ni Unago biasanya disajikan dengan nasi putih atau ubi jalar.",
     descEn:
       "Bawi Ni Unago is a Nias dish made from pork. The pork is cooked with coconut milk, chili, and other spices. Bawi Ni Unago is usually served with white rice or sweet potatoes.",
-    maps: "https://maps.app.goo.gl/n4AVowrcbceCscM99",
+    maps: "https://maps.app.goo.gl/NtXgDcH6jKkPTSbZ8",
   },
 ];

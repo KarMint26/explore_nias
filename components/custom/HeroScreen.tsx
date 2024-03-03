@@ -2,7 +2,7 @@
 
 import React, { useEffect, useState } from "react";
 import { useTheme } from "next-themes";
-import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
+import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Carousel } from "react-responsive-carousel";
 import { dataImagesCarousel } from "@/utils/homepage";
 import Image from "next/image";
@@ -15,10 +15,21 @@ function HeroScreen() {
   const [videoSrc, setVideoSrc] = useState("");
 
   useEffect(() => {
-    const src =
-      theme === "dark"
-        ? "/assets/homepage/video/homepage-dark.mp4"
-        : "/assets/homepage/video/homepage.mp4";
+    let src: string | any;
+    if (theme === "dark") {
+      src = "/assets/homepage/video/homepage-dark.mp4";
+    } else if (theme === "light") {
+      src = "/assets/homepage/video/homepage.mp4";
+    } else if (theme === "system") {
+      const systemTheme = window.matchMedia("(prefers-color-scheme: dark)")
+        .matches
+        ? "dark"
+        : "light";
+      src =
+        systemTheme === "dark"
+          ? "/assets/homepage/video/homepage-dark.mp4"
+          : "/assets/homepage/video/homepage.mp4";
+    }
     setVideoSrc(src);
   }, [theme]);
 
@@ -61,15 +72,15 @@ function HeroScreen() {
                 ? "Jelajahi Keindahan Budaya dan Ragam Pesona Pulau Nias"
                 : "Explore the Cultural Beauty and Various Enchantments of Nias Island"}
             </h1>
-            <p className="text-sm sm:text-base text-justify mt-3 text-main">
+            <p className="text-sm sm:text-base text-justify mt-3 mb-4 text-main">
               {locale === "id"
                 ? "Pulau Nias, surga tersembunyi di barat Sumatera, menawarkan pengalaman wisata yang tak terlupakan. Keindahan alam yang memesona, budaya yang kaya, kuliner yang khas, dan keramahan penduduknya menjadikan Nias destinasi ideal bagi para penjelajah sejati."
                 : "Nias Island, a hidden paradise in western Sumatra, offers an unforgettable travel experience. Breathtaking natural beauty, rich culture, distinctive cuisine and the hospitality of its people make Nias an ideal destination for true explorers."}
             </p>
+            <ButtonPrimary to="#tourism-section">
+              {locale === "id" ? "Mulai Sekarang" : "Get Started Now"}
+            </ButtonPrimary>
           </div>
-          <ButtonPrimary to="#tourism-section">
-            {locale === "id" ? "Mulai Sekarang" : "Get Started Now"}
-          </ButtonPrimary>
         </div>
       </div>
 
@@ -82,15 +93,15 @@ function HeroScreen() {
                 ? "Jelajahi Keindahan Budaya dan Ragam Pesona Pulau Nias"
                 : "Explore the Cultural Beauty and Various Enchantments of Nias Island"}
             </h1>
-            <p className="text-base lg:text-lg mt-3">
+            <p className="text-base lg:text-lg mt-3 mb-4 text-justify">
               {locale === "id"
                 ? "Pulau Nias, surga tersembunyi di barat Sumatera, menawarkan pengalaman wisata yang tak terlupakan. Keindahan alam yang memesona, budaya yang kaya, kuliner yang khas, dan keramahan penduduknya menjadikan Nias destinasi ideal bagi para penjelajah sejati"
                 : "Nias Island, a hidden paradise in western Sumatra, offers an unforgettable travel experience. Breathtaking natural beauty, rich culture, distinctive cuisine and the hospitality of its people make Nias an ideal destination for true explorers."}
             </p>
+            <ButtonPrimary to="#tourism-section">
+              {locale === "id" ? "Mulai Sekarang" : "Get Started Now"}
+            </ButtonPrimary>
           </div>
-          <ButtonPrimary to="#tourism-section">
-            {locale === "id" ? "Mulai Sekarang" : "Get Started Now"}
-          </ButtonPrimary>
         </div>
         <div className="w-full hidden lg:block lg:w-1/2">
           <Carousel

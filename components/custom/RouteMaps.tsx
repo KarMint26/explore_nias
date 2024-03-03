@@ -199,7 +199,7 @@ function RouteMaps() {
   return (
     <div className="w-full relative">
       {!showDetailRoute && (
-        <div className="w-full bg-white  dark:bg-darkBg flex flex-col">
+        <div className="w-full bg-white dark:bg-darkBg flex flex-col">
           <Button
             className="text-lg hover:bg-transparent bg-transparent shadow-none text-main self-center rounded-full px-10 py-5 mt-5"
             onClick={() => setShowDetailRoute(true)}
@@ -216,6 +216,7 @@ function RouteMaps() {
           <div className="w-full py-20 px-16 sm:px-5 lg:px-20 mb-10 bg-[#5A574A] dark:bg-submainDark items-center rounded-t-[5rem] flex flex-col sm:flex-row justify-between">
             {dataMaps.map((item, index) => (
               <div
+                key={index}
                 className="w-80 relative cursor-pointer"
                 onClick={() => {
                   setDataRoute(item.timeLine);

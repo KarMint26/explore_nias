@@ -14,10 +14,10 @@ export default function DetailArticle({ params }: { params: any }) {
   const detail = articleDetail[params.id-1];
 
   return (
-    <div className="w-full max-w-[85rem] m-auto p-5 px-8 sm:px-10 lg:px-0 box-border relative my-5 sm:my-8 lg:my-20 flex flex-col justify-center items-start gap-6 pt-24 sm:pt-20 lg:pt-16">
+    <div className="w-full max-w-[85rem] m-auto p-5 px-8 sm:px-10 box-border relative my-5 sm:my-8 lg:my-20 flex flex-col justify-center items-start gap-6 pt-24 sm:pt-20 lg:pt-16">
       <Link
         href="/article"
-        className="button-back sm:text-base text-sm absolute font-medium left-8 lg:left-0 top-24 sm:top-20 lg:top-16 flex justify-center items-center gap-2"
+        className="button-back sm:text-base text-sm absolute font-medium left-8 lg:left-10 top-24 sm:top-20 lg:top-16 flex justify-center items-center gap-2"
       >
         <AiOutlineArrowLeft className="sm:text-2xl" />
         {locale === "id" ? "Kembali" : "Back"}

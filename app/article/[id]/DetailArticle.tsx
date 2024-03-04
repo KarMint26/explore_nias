@@ -11,7 +11,7 @@ import { AiOutlineArrowLeft } from "react-icons/ai";
 export default function DetailArticle({ params }: { params: any }) {
   const { locale } = useLocale();
   const articleDetail = getArticle();
-  const detail = articleDetail[params.id-1];
+  const detail = articleDetail[params.id - 1];
 
   return (
     <div className="w-full max-w-[85rem] m-auto p-5 px-8 sm:px-10 box-border relative my-5 sm:my-8 lg:my-20 flex flex-col justify-center items-start gap-6 pt-24 sm:pt-20 lg:pt-16">
@@ -45,10 +45,19 @@ export default function DetailArticle({ params }: { params: any }) {
               {detail.title}
             </h1>
             <div className="mb-3 sm:mb-4 flex items-center gap-2 sm:gap-3 text-main mt-2 text-xs sm:text-base">
-              <Calendar size={20} color="#9C9680" className="scale-90 sm:scale-100" />
+              <Calendar
+                size={20}
+                color="#9C9680"
+                className="scale-90 sm:scale-100"
+              />
               {detail.datetime}
             </div>
-            <p className="text-sm sm:text-base text-justify">{detail.text}</p>
+            <p
+              className="text-sm sm:text-base text-justify"
+              dangerouslySetInnerHTML={{
+                __html: detail.text,
+              }}
+            />
           </div>
         </>
       ) : (

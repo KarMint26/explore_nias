@@ -4,7 +4,6 @@ import React from "react";
 import AsteticStick from "../../components/custom/AsteticStick";
 import CardWisata from "../../components/custom/CardWisata";
 import { Drawer, DrawerContent } from "../../components/ui/drawer";
-import DetailTour from "@/app/tour/DetailTour";
 import DetailTourCulinary from "./DetailTourCulinary";
 
 function TourCulinary() {

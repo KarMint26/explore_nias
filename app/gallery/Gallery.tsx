@@ -284,9 +284,9 @@ const Gallery = () => {
       </div>
 
       {/* Galeri Foto */}
-      <div className="galery-photo w-full h-fit px-6 sm:px-10 lg:px-12 py-4 sm:py-6 lg:py-8 relative">
+      <div className="galery-photo w-full h-fit py-4 sm:py-6 lg:py-8 relative">
         {/* Title */}
-        <div className="title-culture flex justify-center items-center text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-semibold gap-2 sm:gap-4">
+        <div className="title-culture px-6 sm:px-10 flex justify-center items-center text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-semibold gap-2 sm:gap-4">
           <Image
             src="/assets/Culture/shape.svg"
             className="scale-[0.85] sm:scale-100"

@@ -29,13 +29,13 @@ export default function DetailTourCulinary({
         <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-semibold leading-[2rem] sm:leading-[3.5rem]">
           {detailTour.name}
         </h1>
-        <p className="text-[0.65rem] sm:text-sm lg:text-xl text-justify">
+        <p className="text-sm lg:text-xl text-justify">
           {locale === "id" ? detailTour.descId : detailTour.descEn}
         </p>
         <Link
           href={detailTour.maps}
           target="_blank"
-          className="text-[0.7rem] sm:text-base font-semibold bg-main lg:text-2xl text-white dark:white w-fit px-7 py-3 rounded-full flex items-center gap-1 sm:gap-2 mt-5 lg:gap-3"
+          className="text-base font-semibold bg-main lg:text-2xl text-white dark:white w-fit px-5 py-2 sm:px-7 sm:py-3 rounded-full flex items-center gap-1 sm:gap-2 mt-5 lg:gap-3"
         >
           <MapPin size={24} className="scale-[0.75] sm:scale-100" />
           {locale === "id" ? "Lihat Peta Lokasi" : "View Map Location"}

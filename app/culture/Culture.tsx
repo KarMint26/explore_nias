@@ -71,29 +71,29 @@ const Culture = () => {
       {/* Content Culture */}
       <div
         id="culture-section"
-        className="culture-content flex flex-col w-full px-12 lg:px-20 py-6 sm:py-8 lg:py-10"
+        className="culture-content flex flex-col w-full px-12 lg:px-20 py-6 sm:py-8 lg:py-12"
       >
         {/* Title */}
         <div className="title-culture flex justify-center items-center text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-semibold gap-2 sm:gap-4">
           <Image
             src="/assets/Culture/shape.svg"
             className="scale-[0.85] sm:scale-100"
-            width={40}
-            height={40}
+            width={35}
+            height={35}
             alt="shape"
           />
           {locale === "id" ? "Budaya Daerah" : "Regional Culture"}
           <Image
             src="/assets/Culture/shape.svg"
             className="scale-[0.85] sm:scale-100"
-            width={40}
-            height={40}
+            width={35}
+            height={35}
             alt="shape"
           />
         </div>
 
         {/* List Culture */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 mt-3 sm:mt-5 lg:mt-7">
           {listCulture.map((data, i) => {
             return (
               <CardContainer

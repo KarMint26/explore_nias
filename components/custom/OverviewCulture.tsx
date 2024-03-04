@@ -3,8 +3,6 @@
 import { useLocale } from "@/contexts/LocaleContext";
 import React from "react";
 import { TypewriterEffectSmooth } from "../ui/typewriter-effect";
-import Link from "next/link";
-import { Button } from "../ui/button";
 import Image from "next/image";
 import AsteticStick from "./AsteticStick";
 import ButtonPrimary from "./ButtonPrimary";
@@ -25,7 +23,7 @@ function OverviewCulture() {
   return (
     <>
       {/* Hero Section */}
-      <div className="w-full h-fit bg-white dark:bg-[#0f0f0f] flex flex-col-reverse lg:flex-row justify-center lg:justify-between items-center py-32 px-12 lg:px-20">
+      <div className="w-full h-fit bg-white dark:bg-[#0f0f0f] flex flex-col-reverse lg:flex-row justify-center lg:justify-between items-center py-12 sm:py-16 lg:py-20 px-12 lg:px-20">
         <div className="flex flex-col justify-start space-y-4 lg:w-[55%] mt-5 lg:mt-0">
           <div className="sm:mb-5 my-7 sm:mt-0">
             <AsteticStick />

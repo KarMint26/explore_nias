@@ -172,3 +172,40 @@ html {
   background-repeat: no-repeat;
 }
 
+/* Scrollbar Style */
+/* Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--primary-color) hsla(186, 100%, 69%, 1) 100%;
+}
+
+/* Chrome, Edge and Safari */
+*::-webkit-scrollbar {
+  height: 10px;
+  width: 10px;
+}
+*::-webkit-scrollbar-track {
+  border-radius: 20px;
+  background-color: transparent;
+}
+
+*::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background: #6b6653;
+  background: linear-gradient(
+    90deg,
+    #6b6653,
+    #9C9680
+  );
+  background: -moz-linear-gradient(
+    90deg,
+    #6b6653,
+    #9C9680
+  );
+  background: -webkit-linear-gradient(
+    90deg,
+    #6b6653,
+    #9C9680
+  );
+}
+

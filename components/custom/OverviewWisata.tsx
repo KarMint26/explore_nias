@@ -35,8 +35,8 @@ function OverviewWisata() {
   const { locale } = useLocale();
 
   return (
-    <div className="w-full bg-white dark:bg-darkBg" id="tourism-section">
-      <div className="flex w-full p-10 justify-between items-center flex-col-reverse sm:flex-row lg:flex-row">
+    <div className="w-full bg-white dark:bg-darkBg py-4 sm:py-6 lg:py-8" id="tourism-section">
+      <div className="flex w-full p-10 pb-0 sm:pb-8 justify-between items-center flex-col-reverse sm:flex-row lg:flex-row">
         <p className="text-sm sm:text-xl text-main sm:w-[28rem] mt-5 text-center">
           {locale === "id"
             ? '"Jelajahi keajaiban Pulau Nias, tempat di mana keindahan alam tropis bertemu dengan kekayaan budaya yang khas."'

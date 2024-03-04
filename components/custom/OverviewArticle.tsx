@@ -12,7 +12,7 @@ function OverviewArticle() {
   const article = getArticle();
 
   return (
-    <div className="w-full p-5 lg:p-10 lg:px-20 bg-white dark:bg-darkBg mt-5 flex flex-col lg:flex-row">
+    <div className="w-full p-5 pb-12 sm:pb-14 lg:p-10 lg:px-20 bg-white dark:bg-darkBg mt-5 flex flex-col lg:flex-row">
       <div className="w-full flex items-cente justify-center">
         <Image
           src="/assets/homepage/foto/reads.png"

@@ -53,7 +53,7 @@ export default function DetailArticle({ params }: { params: any }) {
               {detail.datetime}
             </div>
             <p
-              className="text-sm sm:text-base text-justify"
+              className="text-sm sm:text-base lg:text-lg text-justify"
               dangerouslySetInnerHTML={{
                 __html: detail.text,
               }}

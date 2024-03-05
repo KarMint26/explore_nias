@@ -39,7 +39,7 @@ function HeroTour() {
             src="/assets/tour/Ihero.png"
             width={500}
             height={500}
-            className="w-full sm:w-[28rem] sm:translate-y-6 lg:translate-y-0 object-cover scale-90 lg:scale-100"
+            className="w-full sm:w-[28rem] sm:translate-y-6 lg:translate-y-0 object-cover scale-90 lg:scale-[1.1]"
             alt="hero-1"
           />
         </div>

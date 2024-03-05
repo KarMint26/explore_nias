@@ -1,7 +1,6 @@
 "use client";
 
 import { useLocale } from "@/contexts/LocaleContext";
-import Image from "next/image";
 import React from "react";
 import AsteticStick from "./AsteticStick";
 import ButtonPrimary from "./ButtonPrimary";

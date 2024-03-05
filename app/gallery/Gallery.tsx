@@ -234,9 +234,9 @@ const Gallery = () => {
   useEffect(() => {
     let src: string | any;
     if (theme === "dark") {
-      src = "/assets/homepage/video/homepage-dark.mp4";
+      src = "/assets/video/homepage-dark.mp4";
     } else if (theme === "light") {
-      src = "/assets/homepage/video/homepage.mp4";
+      src = "/assets/video/homepage.mp4";
     } else if (theme === "system") {
       const systemTheme = window.matchMedia("(prefers-color-scheme: dark)")
         .matches
@@ -244,8 +244,8 @@ const Gallery = () => {
         : "light";
       src =
         systemTheme === "dark"
-          ? "/assets/homepage/video/homepage-dark.mp4"
-          : "/assets/homepage/video/homepage.mp4";
+          ? "/assets/video/homepage-dark.mp4"
+          : "/assets/video/homepage.mp4";
     }
     setVideoSrc(src);
   }, [theme]);

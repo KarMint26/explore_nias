@@ -35,7 +35,7 @@ export default function DetailTour({
         <Link
           href={detailTour.maps}
           target="_blank"
-          className="text-[0.7rem] text-base font-semibold bg-main lg:text-2xl text-white dark:white w-fit px-5 py-2 sm:px-7 sm:py-3 rounded-full flex items-center gap-1 sm:gap-2 mt-5 lg:gap-3 shadow"
+          className="text-[0.7rem] text-base font-semibold bg-main lg:text-xl text-white dark:white w-fit px-5 py-2 sm:px-7 sm:py-3 rounded-full flex items-center gap-1 sm:gap-2 mt-5 lg:gap-3 shadow"
         >
           <MapPin size={24} className="scale-[0.75] sm:scale-100" />
           {locale === "id" ? "Lihat Peta Lokasi" : "View Map Location"}

@@ -31,7 +31,7 @@ function Item({ name, startPrice, endPrice }: ItemType) {
           {name}
         </h3>
         <p className="block mb-2 text-sm font-normal leading-none text-gray-500">
-          IDR {startPrice} - {endPrice}
+          {startPrice !== "" ? "IDR" : ""} {startPrice} {startPrice !== "" ? "-" : ""} {endPrice}
         </p>
       </li>
     </>
@@ -48,8 +48,8 @@ const dataMaps = [
         id: 0,
         nameId: "Daerah Asal",
         nameEn: "Home Region",
-        startPrice: "~",
-        endPrice: "~",
+        startPrice: "",
+        endPrice: "",
       },
       {
         id: 1,

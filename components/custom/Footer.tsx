@@ -4,10 +4,14 @@ import { useLocale } from "@/contexts/LocaleContext";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
-import { TbBrandTelegram } from "react-icons/tb";
-import { FiFacebook } from "react-icons/fi";
-import { BsTwitterX } from "react-icons/bs";
-import { FaInstagram, FaMapLocationDot, FaRegCopyright } from "react-icons/fa6";
+import { FiFacebook, FiYoutube } from "react-icons/fi";
+import {
+  FaGithub,
+  FaInstagram,
+  FaMapLocationDot,
+  FaRegCopyright,
+  FaYoutube,
+} from "react-icons/fa6";
 import { FaTheaterMasks } from "react-icons/fa";
 import { MdArticle } from "react-icons/md";
 import { BiSolidPhotoAlbum } from "react-icons/bi";
@@ -57,30 +61,58 @@ export default function Footer() {
               </Link>
             </div>
             <div className="social-media hidden lg:flex justify-center items-center gap-4 lg:gap-5 text-lg sm:text-xl lg:text-2xl">
-              <FiFacebook className="cursor-pointer" />
-              <BsTwitterX className="cursor-pointer" />
-              <TbBrandTelegram className="cursor-pointer" />
-              <FaInstagram className="cursor-pointer" />
+              <Link
+                target="_blank"
+                href="https://www.facebook.com/people/Tech-Titans/61556895187086"
+              >
+                <FiFacebook className="cursor-pointer" />
+              </Link>
+              <Link target="_blank" href="https://instagram.com/tim_techtitans">
+                <FaInstagram className="cursor-pointer" />
+              </Link>
+              <Link target="_blank" href="https://github.com/TimTechTitans">
+                <FaGithub className="cursor-pointer" />
+              </Link>
+              <Link
+                target="_blank"
+                href="https://www.youtube.com/channel/UCDHjdGU4sZg3sA35-iagQkA"
+              >
+                <FaYoutube className="cursor-pointer" />
+              </Link>
             </div>
           </div>
           <div className="copyright-wide hidden lg:flex items-center gap-1 sm:gap-2 text-xs sm:text-base lg:text-lg">
             <FaRegCopyright className="font-bold" />
             <div>
-              2024 by <span className="font-bold">Tech Titans</span> - WDC 2024
+              2024 by <span className="font-bold">Tech Titans</span> - WDC UAJY 2024
             </div>
           </div>
           <div className="social-media flex lg:hidden items-center gap-2 sm:gap-4 text-base sm:text-2xl">
-            <FiFacebook className="cursor-pointer" />
-            <BsTwitterX className="cursor-pointer" />
-            <TbBrandTelegram className="cursor-pointer" />
-            <FaInstagram className="cursor-pointer" />
+            <Link
+              target="_blank"
+              href="https://www.facebook.com/people/Tech-Titans/61556895187086"
+            >
+              <FiFacebook className="cursor-pointer" />
+            </Link>
+            <Link target="_blank" href="https://instagram.com/tim_techtitans">
+              <FaInstagram className="cursor-pointer" />
+            </Link>
+            <Link target="_blank" href="https://github.com/TimTechTitans">
+              <FaGithub className="cursor-pointer" />
+            </Link>
+            <Link
+              target="_blank"
+              href="https://www.youtube.com/channel/UCDHjdGU4sZg3sA35-iagQkA"
+            >
+              <FaYoutube className="cursor-pointer" />
+            </Link>
           </div>
         </div>
       </div>
       <div className="copyright lg:hidden py-2 sm:py-3 bg-[#1b243a] dark:bg-[#221b09] flex items-center gap-1 sm:gap-2 text-[0.7rem] sm:text-base lg:text-lg text-white mt-5 w-full justify-center">
         <FaRegCopyright className="font-bold" />
         <div>
-          2024 by <span className="font-bold">Tech Titans</span> - WDC 2024
+          2024 by <span className="font-bold">Tech Titans</span> - WDC UAJY 2024
         </div>
       </div>
     </div>

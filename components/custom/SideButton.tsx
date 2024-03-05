@@ -46,7 +46,7 @@ export default function SideButton() {
 
   return (
     <TooltipProvider>
-      <div className="fixed bottom-5 right-5 flex flex-col items-center justify-center gap-5 z-10">
+      <div className="fixed bottom-7 sm:bottom-5 right-5 flex flex-row items-center justify-center gap-3 sm:gap-5 z-10">
         <Tooltip>
           <TooltipTrigger asChild>
             <div

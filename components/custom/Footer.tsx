@@ -113,7 +113,8 @@ export default function Footer() {
       <div className="copyright lg:hidden py-2 sm:py-3 bg-[#1b243a] dark:bg-[#221b09] flex items-center gap-1 sm:gap-2 text-[0.7rem] sm:text-base lg:text-lg text-white mt-5 w-full justify-center">
         <FaRegCopyright className="font-bold" />
         <div>
-          2024 by <span className="font-bold">Tech Titans</span> - WDC UAJY 2024
+          2025 by <span className="font-bold">Van Der Sar</span> - ICON FEST
+          2025
         </div>
       </div>
     </div>
